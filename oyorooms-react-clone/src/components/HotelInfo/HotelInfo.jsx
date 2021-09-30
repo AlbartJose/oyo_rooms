@@ -234,13 +234,18 @@ export const HotelInfo = () => {
                       color: "#424242",
                       borderColor: "#424242",
                       height: "70%",
+                      marginLeft: "40px",
                     }}
                   >
                     View Details
                   </Button>
                   <Button
                     variant="contained"
-                    style={{ backgroundColor: "#1AB64F", height: "70%" }}
+                    style={{
+                      backgroundColor: "#1AB64F",
+                      height: "70%",
+                      marginLeft: "20px",
+                    }}
                   >
                     Book Now
                   </Button>

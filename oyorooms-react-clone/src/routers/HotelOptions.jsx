@@ -1,9 +1,10 @@
-// import { Offer1 } from "../components/offers/Offer1";
+import { Offer1 } from "../components/offers/Offer1";
 import styled from "styled-components";
 import { Filters } from "../components/Filters/Filters";
 import { HotelInfo } from "../components/HotelInfo/HotelInfo";
 import { TopFilterBar } from "../components/Filters/TopFilterBar";
 import { FooterTwo } from "../components/FooterTwo";
+import { COVID } from "../components/COVID";
 
 const MainDiv = styled.div`
   display: flex;
@@ -28,13 +29,14 @@ const RightDiv = styled.div`
 export const HotelOptions = () => {
   return (
     <>
+      <COVID />
       <MainDiv>
         <LeftDiv>
           <Filters />
         </LeftDiv>
         <RightDiv>
-          {/* <Offer1 /> */}
           <TopFilterBar />
+          <Offer1 />
           <HotelInfo />
           <HotelInfo />
           <HotelInfo />

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 export const FooterTwo = () => {
   const Footer = styled.div`
+    background-color: #6d787d;
+    color: #ffffff;
     & .footer-sec2 {
       display: flex;
       justify-content: space-between;
@@ -40,18 +42,22 @@ export const FooterTwo = () => {
     }
     & .footer-sec3 {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       text-align: center;
       padding: 35px;
       border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    }
+
+    & .footer-sec3 h3 {
+      color: #ffffff;
     }
     & .footer-sec3 p {
       margin-top: 15px;
     }
 
     & .footer-sec5 {
-      padding: 35px 35px 0px 35px;
+      padding: 35px 35px 35px 35px;
     }
     & .footer-sec5 img {
       margin-right: 25px;

@@ -1,6 +1,8 @@
 import { Locations } from "./Locations";
 import { SlideBar } from "./SlideBar";
 import styled from "styled-components";
+import { Categories } from "./Categories";
+import { Collections } from "./Collections";
 
 const P1 = styled.p`
   font-size: 20px;
@@ -37,6 +39,12 @@ export const Filters = () => {
 
       <ComponentDiv>
         <SlideBar />
+      </ComponentDiv>
+      <ComponentDiv>
+        <Collections />
+      </ComponentDiv>
+      <ComponentDiv>
+        <Categories />
       </ComponentDiv>
     </>
   );
