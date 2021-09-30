@@ -24,19 +24,21 @@ const RightDiv = styled.div`
 
 export const HotelOptions = () => {
   return (
-    <MainDiv>
-      <LeftDiv>
-        <Filters />
-      </LeftDiv>
-      <RightDiv>
-        {/* <Offer1 /> */}
-        <TopFilterBar />
-        <HotelInfo />
-        <HotelInfo />
-        <HotelInfo />
-        <HotelInfo />
-      </RightDiv>
+    <>
+      <MainDiv>
+        <LeftDiv>
+          <Filters />
+        </LeftDiv>
+        <RightDiv>
+          {/* <Offer1 /> */}
+          <TopFilterBar />
+          <HotelInfo />
+          <HotelInfo />
+          <HotelInfo />
+          <HotelInfo />
+        </RightDiv>
+      </MainDiv>
       <FooterTwo />
-    </MainDiv>
+    </>
   );
 };

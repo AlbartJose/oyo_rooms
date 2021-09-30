@@ -1,23 +1,6 @@
 import styled from "styled-components";
 export const FooterTwo = () => {
   const Footer = styled.div`
-    & .footer-sec1 div:nth-of-type(2) button {
-      width: 173px;
-      height: 48px;
-      background: #ffffff;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-    }
-    & .footer-sec1 div:nth-of-type(2) button img {
-      margin-right: 5px;
-    }
-    & .footer-sec1 div:nth-of-type(1) > *,
-    & .footer-sec1 div:nth-of-type(2) > * {
-      margin-right: 15px;
-    }
     & .footer-sec2 {
       display: flex;
       justify-content: space-between;
@@ -66,21 +49,7 @@ export const FooterTwo = () => {
     & .footer-sec3 p {
       margin-top: 15px;
     }
-    & .footer-sec4-flex {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    & .footer-sec4 {
-      padding: 35px;
-      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
-    }
-    & .footer-sec4 p {
-      margin: 15px;
-    }
-    & .footer-sec4 p:hover {
-      text-decoration: underline;
-    }
+
     & .footer-sec5 {
       padding: 35px 35px 0px 35px;
     }
@@ -93,19 +62,6 @@ export const FooterTwo = () => {
   return (
     <>
       <Footer>
-        <div className="footer-sec1">
-          <div>
-            <img src="/images/UnionWhite.png" alt="UnionWhite" />
-            <p>The World’s Fastest Growing Hotel Chain</p>
-          </div>
-          <div>
-            <p>Join our network and grow your business!</p>
-            <button>
-              <img src="/images/property.png" alt="property" />
-              List your property
-            </button>
-          </div>
-        </div>
         <div className="footer-sec2">
           <div>
             <p>Download OYO app for excitng offers.</p>
