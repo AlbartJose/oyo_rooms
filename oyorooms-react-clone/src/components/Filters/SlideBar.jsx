@@ -1,15 +1,7 @@
-// import { Slider } from "antd";
 import styled from "styled-components";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Slider from "@material-ui/core/Slider";
 import { useState } from "react";
-
-const useStyles = makeStyles({
-  root: {
-    width: 300,
-  },
-});
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
 
 function valuetext(value) {
   return `${value}°C`;
@@ -25,13 +17,8 @@ const P = styled.p`
   color: #424242;
 `;
 
-// function valuetext(value) {
-//   return `${value}°C`;
-// }
-
 export const SlideBar = () => {
-  const classes = useStyles();
-  const [value, setValue] = useState([20, 37]);
+  const [value, setValue] = useState([0, 100]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -39,19 +26,17 @@ export const SlideBar = () => {
   return (
     <>
       <P>Price</P>
-      <div className={classes.root}>
-        <Typography id="range-slider" gutterBottom>
-          Temperature range
-        </Typography>
+
+      <Box sx={{ width: 300 }}>
         <Slider
+          getAriaLabel={() => "Price range"}
           value={value}
-          color="secondary"
           onChange={handleChange}
           valueLabelDisplay="auto"
-          aria-labelledby="range-slider"
           getAriaValueText={valuetext}
+          style={{ margin: "0 3%", color: "#F36C65" }}
         />
-      </div>
+      </Box>
     </>
   );
 };

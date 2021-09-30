@@ -1,6 +1,9 @@
-import { Offer1 } from "../components/offers/Offer1";
+// import { Offer1 } from "../components/offers/Offer1";
 import styled from "styled-components";
 import { Filters } from "../components/Filters/Filters";
+import { HotelInfo } from "../components/HotelInfo/HotelInfo";
+import { TopFilterBar } from "../components/Filters/TopFilterBar";
+
 const MainDiv = styled.div`
   display: flex;
 `;
@@ -22,7 +25,12 @@ export const HotelOptions = () => {
         <Filters />
       </LeftDiv>
       <RightDiv>
-        <Offer1 />
+        {/* <Offer1 /> */}
+        <TopFilterBar />
+        <HotelInfo />
+        <HotelInfo />
+        <HotelInfo />
+        <HotelInfo />
       </RightDiv>
     </MainDiv>
   );

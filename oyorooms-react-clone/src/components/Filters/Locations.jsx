@@ -11,10 +11,7 @@ const ButtonDiv = styled.div`
 export const Locations = () => {
   return (
     <>
-      <Input
-        placeholder="Search..."
-        style={{ color: "#F0F0F0", borderColor: "#F0F0F0" }}
-      />
+      <Input placeholder="Search..." style={{ borderColor: "#F0F0F0" }} />
       <ButtonDiv>
         <Button
           style={{
