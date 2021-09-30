@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 /* navbar */
 
 .master-div-navbar {
@@ -49,13 +49,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 8px 22px;
-  width: 115px;
+  padding: 8px 30px;
   height: 42px;
   cursor: pointer;
 }
 .down:hover {
   background-color: rgba(0, 0, 0, 0.08);
+}
+.down:hover.down img {
+  transform: rotate(180deg);
+  transition: all 0.3s;
 }
 .down p {
   font-weight: 500;
@@ -71,7 +74,6 @@
   display: flex;
   align-items: center;
   background: #f2f2f2;
-  padding: 0 60px;
 }
 .locations div:nth-of-type(12) {
   display: flex;
@@ -105,7 +107,7 @@
 .dropdown p:hover {
   color: red;
   transform: translateX(5%);
-  transition: all 0.3s;
+  transition: all 0.15s;
 }
 
 /* search field div */
@@ -153,7 +155,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  padding: 0 25px;
   margin-left: -5px;
 }
 .rooms + button {
@@ -188,9 +190,21 @@
   position: absolute;
   width: 108px;
   height: 126px;
-  left: 120px;
-  top: 800px;
+  left: 130px;
+  top: 810px;
   cursor: pointer;
+}
+.uaeDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: white;
+  top: 950px;
+  left: 145px;
 }
 .nepal {
   position: absolute;
@@ -200,6 +214,18 @@
   top: 740px;
   cursor: pointer;
 }
+.nepalDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: white;
+  top: 850px;
+  left: 300px;
+}
 .china {
   position: absolute;
   width: 108px;
@@ -207,6 +233,18 @@
   left: 440px;
   top: 715px;
   cursor: pointer;
+}
+.chinaDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: white;
+  top: 820px;
+  left: 500px;
 }
 .india {
   position: absolute;
@@ -216,13 +254,37 @@
   top: 880px;
   cursor: pointer;
 }
+.indiaDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: white;
+  top: 1010px;
+  left: 300px;
+}
 .malayasia {
   position: absolute;
   width: 150px;
   height: 100px;
-  left: 400px;
+  left: 420px;
   top: 850px;
   cursor: pointer;
+}
+.malayasiaDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: white;
+  top: 950px;
+  left: 500px;
 }
 .indonesia {
   position: absolute;
@@ -231,6 +293,18 @@
   left: 380px;
   top: 950px;
   cursor: pointer;
+}
+.indoDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: white;
+  top: 1085px;
+  left: 400px;
 }
 .world-wide-right-section {
   padding: 50px 120px;
@@ -313,6 +387,7 @@
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
 }
 .footer-sec1 div:nth-of-type(2) button img {
   margin-right: 5px;
@@ -320,6 +395,7 @@
 .footer-sec1 div:nth-of-type(1) > *,
 .footer-sec1 div:nth-of-type(2) > * {
   margin-right: 15px;
+  object-fit: contain;
 }
 .footer-sec2 {
   display: flex;
@@ -369,6 +445,9 @@
 .footer-sec3 p {
   margin-top: 15px;
 }
+.footer-sec3 p:hover {
+  text-decoration: underline;
+}
 .footer-sec4-flex {
   display: flex;
   align-items: center;
@@ -386,8 +465,23 @@
 }
 .footer-sec5 {
   padding: 35px 35px 0px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .footer-sec5 img {
   margin-right: 25px;
   cursor: pointer;
+}
+.footer-sec5 p {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.005em;
+
+  /* Neutral white */
+
+  color: #f4fcfe;
 }
