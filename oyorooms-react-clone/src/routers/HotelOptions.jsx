@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Filters } from "../components/Filters/Filters";
 import { HotelInfo } from "../components/HotelInfo/HotelInfo";
 import { TopFilterBar } from "../components/Filters/TopFilterBar";
+import { FooterTwo } from "../components/FooterTwo";
 
 const MainDiv = styled.div`
   display: flex;
@@ -35,6 +36,7 @@ export const HotelOptions = () => {
         <HotelInfo />
         <HotelInfo />
       </RightDiv>
+      <FooterTwo />
     </MainDiv>
   );
 };
