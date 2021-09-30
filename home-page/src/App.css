@@ -208,6 +208,7 @@
   color: #ffffff;
   border: none;
   margin-left: -1px;
+  cursor: pointer;
 }
 /* banner */
 .banner {
