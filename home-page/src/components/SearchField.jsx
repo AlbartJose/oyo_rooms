@@ -6,10 +6,11 @@ function SearchField() {
   const [roomCounter, setroomCounter] = useState(1);
   const [rooms, setrooms] = useState(false);
   const [roomsNum, setroomsNum] = useState(1);
+  const [date, setonDateChange] = useState("");
   const handleRoomDIv = () => {
     setrooms(true);
   };
-
+  console.log(date);
   let roomRef = useRef();
 
   useEffect(() => {
@@ -29,6 +30,9 @@ function SearchField() {
   return (
     <>
       <div className="red-rectangle">
+        <p className="heading-red-rectangle">
+          World’s Fastest Growing Hotel Chain
+        </p>
         <img src="/images/redRectangle.png" alt="redRectangle" />
         <div className="search-field">
           <input
@@ -38,6 +42,9 @@ function SearchField() {
           <RangeDatePicker
             startDate={new Date(2020, 0, 15)}
             endDate={new Date(2020, 1, 1)}
+            onChange={(startDate, endDate) =>
+              setonDateChange(startDate, endDate)
+            }
           />
           <div className="rooms" onClick={handleRoomDIv}>
             <p>1 Room, 1 Guest</p>
