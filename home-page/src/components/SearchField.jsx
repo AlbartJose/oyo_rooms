@@ -5,6 +5,7 @@ import React, { useState, useRef, useEffect } from "react";
 function SearchField() {
   const [roomCounter, setroomCounter] = useState(1);
   const [rooms, setrooms] = useState(false);
+  const [roomsNum, setroomsNum] = useState(1);
   const handleRoomDIv = () => {
     setrooms(true);
   };
@@ -41,14 +42,16 @@ function SearchField() {
           <div className="rooms" onClick={handleRoomDIv}>
             <p>1 Room, 1 Guest</p>
             {rooms ? (
-              <div className="roomsDiv">
+              <div className="roomsDiv" ref={roomRef}>
                 <div>
                   <p>Rooms</p>
                   <p>Guest</p>
                 </div>
                 <div>
-                  <p>Rooms</p>
-                  <div className="room-counter" ref={roomRef}>
+                  <p>
+                    Rooms <span style={{ fontWeight: "bold" }}>{roomsNum}</span>
+                  </p>
+                  <div className="room-counter">
                     <button
                       onClick={() => {
                         setroomCounter((prev) => prev - 1);
@@ -67,8 +70,20 @@ function SearchField() {
                   </div>
                 </div>
                 <div>
-                  <p>Delete room</p>
-                  <p>Add room</p>
+                  <button
+                    onClick={() => {
+                      setroomsNum((prev) => prev - 1);
+                    }}
+                  >
+                    Delete room
+                  </button>
+                  <button
+                    onClick={() => {
+                      setroomsNum((prev) => prev + 1);
+                    }}
+                  >
+                    Add room
+                  </button>
                 </div>
               </div>
             ) : null}
