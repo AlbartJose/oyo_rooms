@@ -2,19 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import "./PaymentStyle.css";
 
-var initVar = {
-  name: "SPOT ON 46946 Hotel Aalishan",
-  poster: "./Images/Payment/payaali1.jpg",
-  days: 16,
-  new: "true",
-  date: "Wed, 13 Oct - Fri, 29 Oct",
-  room: "1 Room, 2 Guests",
-  type: "SPOT ON NON-AC",
-  price: 30722,
-  pdrop: 11684,
-};
-
-export function PaymentSide() {
+export function PaymentSide({ initVar }) {
   const [payData] = useState(initVar);
 
   const PayImgDiv = styled.div`

@@ -1,7 +1,6 @@
 import "./PaymentStyle.css";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { css } from "styled-components";
 
 const PayInput = styled.input`
   font-weight: 500;
@@ -14,15 +13,28 @@ const PayInput = styled.input`
   width: 250px;
 `;
 
-export function PaymentDetail({ setCardOpen }) {
-  const [verifyData, setVerifyData] = useState(true);
-  const [verifyCode, setVerifyCode] = useState(true);
-  const [sendCode, setSendCode] = useState(true);
-  const [userData, setUserData] = useState({});
+var initData = {
+  name: "",
+  email: "",
+  mobile: "",
+  code: "",
+};
 
-  // useEffect(() => {
+export function PaymentDetail({ setCardOpen, setUser }) {
+  const [verifyData, setVerifyData] = useState(false);
+  const [verifyCode, setVerifyCode] = useState(false);
+  const [sendCode, setSendCode] = useState(false);
+  const [userData, setUserData] = useState(initData);
 
-  // });
+  useEffect(() => {
+    if (
+      userData.name.length > 3 &&
+      userData.email.length > 4 &&
+      userData.mobile.length >= 10
+    )
+      setVerifyData(true);
+    if (userData.code.length === 4) setVerifyCode(true);
+  }, [userData]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +47,10 @@ export function PaymentDetail({ setCardOpen }) {
   }
 
   function handleCardOped() {
-    if (verifyCode) setCardOpen(true);
+    if (verifyCode) {
+      setUser(userData);
+      setCardOpen(true);
+    }
   }
 
   return (
@@ -55,6 +70,11 @@ export function PaymentDetail({ setCardOpen }) {
           <div className="paymarginSpecial">
             <div className="paylabel">Full Name</div>
             <PayInput
+              style={
+                verifyData
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
               onChange={handleInputChange}
               name="name"
               type="text"
@@ -65,6 +85,11 @@ export function PaymentDetail({ setCardOpen }) {
           <div>
             <div className="paylabel">Email Address</div>
             <PayInput
+              style={
+                verifyData
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
               onChange={handleInputChange}
               name="email"
               type="text"
@@ -74,6 +99,11 @@ export function PaymentDetail({ setCardOpen }) {
           <div className="paymarginSpecial">
             <div className="paylabel">Mobile Number</div>
             <PayInput
+              style={
+                verifyData
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
               onChange={handleInputChange}
               name="mobile"
               type="number"

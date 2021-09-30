@@ -1,6 +1,6 @@
 import "./PaymentStyle.css";
 
-export function PaymentInpDetail({ setCardOpen }) {
+export function PaymentInpDetail({ setCardOpen, user }) {
   return (
     <div className="payInpClosed">
       <div className="payInpClosedB1">
@@ -18,11 +18,11 @@ export function PaymentInpDetail({ setCardOpen }) {
         </div>
       </div>
       <div>
-        <div>Soumik</div>
+        <div>{user.name}</div>
         <div>|</div>
-        <div>daka0014@gmail.com</div>
+        <div>{user.email}</div>
         <div>|</div>
-        <div>8373011634</div>
+        <div>{user.mobile}</div>
       </div>
     </div>
   );

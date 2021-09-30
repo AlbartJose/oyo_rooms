@@ -6,8 +6,22 @@ import { PaymentCompleteOpen } from "./PaymentCompleteOpen";
 import { PaymentInpDetail } from "./PaymentInpDetail";
 import { useState } from "react";
 
+var initVar = {
+  name: "SPOT ON 46946 Hotel Aalishan",
+  poster: "./Images/Payment/payaali1.jpg",
+  days: 16,
+  new: "true",
+  date: "Wed, 13 Oct - Fri, 29 Oct",
+  room: "1 Room, 2 Guests",
+  type: "SPOT ON NON-AC",
+  price: 30722,
+  pdrop: 11684,
+};
+
 export function PaymentMain() {
+  const [payData] = useState(initVar);
   const [cardOpen, setCardOpen] = useState(false);
+  const [user, setUser] = useState({});
   return (
     <div>
       <div className="headerPay"></div>
@@ -20,17 +34,25 @@ export function PaymentMain() {
             </div>
             {cardOpen ? (
               <>
-                <PaymentInpDetail setCardOpen={setCardOpen} />
-                <PaymentCompleteOpen />
+                <PaymentInpDetail setCardOpen={setCardOpen} user={user} />
+                <PaymentCompleteOpen
+                  price={
+                    payData.price -
+                    payData.pdrop -
+                    Math.round((payData.price - payData.pdrop) / 4) -
+                    Math.round((payData.price - payData.pdrop) / 20) +
+                    399
+                  }
+                />
               </>
             ) : (
               <>
-                <PaymentDetail setCardOpen={setCardOpen} />
+                <PaymentDetail setCardOpen={setCardOpen} setUser={setUser} />
                 <PaymentCompleteClosed />
               </>
             )}
           </div>
-          <PaymentSide />
+          <PaymentSide initVar={initVar} />
         </div>
       </div>
     </div>

@@ -1,8 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./PaymentStyle.css";
+import { useHistory } from "react-router-dom";
 
-export function PaymentCompleteOpen() {
-  const [verifyCard] = useState(false);
+var initcard = {
+  card_name: "",
+  card_num: "",
+  card_mm: "",
+  card_yy: "",
+  card_cvv: "",
+};
+
+export function PaymentCompleteOpen({ price }) {
+  const history = useHistory();
+  const [verifyCard, setVerifyCard] = useState(false);
+  const [cardData, setCardData] = useState(initcard);
+
+  function handleClick() {
+    if (verifyCard) history.push("/");
+  }
+
+  useEffect(() => {
+    if (
+      cardData.card_name.length > 3 &&
+      cardData.card_num.length === 16 &&
+      cardData.card_mm >= 1 &&
+      cardData.card_mm <= 12 &&
+      cardData.card_yy > 2021 &&
+      cardData.card_cvv.length === 3
+    ) {
+      setVerifyCard(true);
+    }
+  }, [cardData]);
+
+  const handleCardChange = (e) => {
+    const { name, value } = e.target;
+    var data = { ...cardData, [name]: value };
+    setCardData(data);
+  };
+
   return (
     <div className="payCompleteOpen">
       <div className="payDetailHead">
@@ -58,17 +93,67 @@ export function PaymentCompleteOpen() {
 
           <div className="payCardDetails">YOUR CARD DETAILS</div>
           <div className="cardinputA">
-            <input type="number" placeholder="Card Number" />
+            <input
+              style={
+                verifyCard
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
+              onChange={handleCardChange}
+              name="card_num"
+              type="number"
+              placeholder="Card Number"
+            />
           </div>
           <div className="cardinputA">
-            <input type="text" placeholder="Card Holder Name" />
+            <input
+              style={
+                verifyCard
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
+              onChange={handleCardChange}
+              name="card_name"
+              type="text"
+              placeholder="Card Holder Name"
+            />
           </div>
           <div className="cardinputA">
             <div className="cardinpValidThru">Valid thru</div>
-            <input type="number" placeholder="MM" />
-            <input type="number" placeholder="YY" />
+            <input
+              style={
+                verifyCard
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
+              onChange={handleCardChange}
+              name="card_mm"
+              type="number"
+              placeholder="MM"
+            />
+            <input
+              style={
+                verifyCard
+                  ? { backgroundColor: "#e8f0fe" }
+                  : { backgroundColor: "white" }
+              }
+              onChange={handleCardChange}
+              name="card_yy"
+              type="number"
+              placeholder="YY"
+            />
             <div className="cardinpcvv">
-              <input type="number" placeholder="CVV" />
+              <input
+                style={
+                  verifyCard
+                    ? { backgroundColor: "#e8f0fe" }
+                    : { backgroundColor: "white" }
+                }
+                onChange={handleCardChange}
+                name="card_cvv"
+                type="number"
+                placeholder="CVV"
+              />
             </div>
           </div>
           <div>
@@ -85,6 +170,7 @@ export function PaymentCompleteOpen() {
             }}
           >
             <button
+              onClick={() => handleClick()}
               className="payPasscode cardButtonPay "
               style={
                 verifyCard
@@ -92,7 +178,7 @@ export function PaymentCompleteOpen() {
                   : { backgroundColor: "#e5e5e5" }
               }
             >
-              Pay Now ₹3305
+              Pay Now ₹{price}
             </button>
             <div className="cardWeAccept">
               <div>We Accept</div>
