@@ -1,10 +1,11 @@
-import {RoomDetails} from "./components/RoomDetail/RoomDetails"
+import { RouteMain } from "./Routes/RouteMain";
 
 function App() {
   return (
     <div>
 
-    <RoomDetails/>
+    {/* <RoomDetails/> */}
+    <RouteMain/>
       
       {/* cards */}
       

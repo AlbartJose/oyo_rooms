@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Slider } from "./Slider";
 import "./RoomDetails.css";
+import {Link} from "react-router-dom"
 
 // import {Icons} from ".../public/Icons"
 
@@ -255,7 +256,7 @@ export function RoomDetails() {
                   <p>₹13964</p>
                 </div>
 
-                <button className="continue-btn">Continue to Book</button>
+               <Link to="/payment"><button className="continue-btn">Continue to Book</button></Link> 
                 <div className="redFont">
                   <p>Cancellation Policy</p>
                   <p>Follow safety measures advised at the hotel</p>

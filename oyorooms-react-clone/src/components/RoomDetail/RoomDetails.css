@@ -11,13 +11,13 @@
     padding-top: 10px;
     /* margin-bottom: 20px; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 719px;
+    width: 63%;
     /* border: 1px solid black; */
 }
 
 .product-details-child-right-div{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width:406px;
+    width:35%;
     /* border: 1px solid black; */
     position: sticky;
     right: 50px;
