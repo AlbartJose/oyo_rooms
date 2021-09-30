@@ -5,6 +5,7 @@ import { HotelInfo } from "../components/HotelInfo/HotelInfo";
 import { TopFilterBar } from "../components/Filters/TopFilterBar";
 import { FooterTwo } from "../components/FooterTwo";
 import { COVID } from "../components/COVID";
+import { Navbar2 } from "../components/Navbar2/Navbar2";
 
 const MainDiv = styled.div`
   display: flex;
@@ -29,6 +30,7 @@ const RightDiv = styled.div`
 export const HotelOptions = () => {
   return (
     <>
+      <Navbar2 />
       <COVID />
       <MainDiv>
         <LeftDiv>
