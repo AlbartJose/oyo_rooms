@@ -1,9 +1,9 @@
-
+import { HotelOptions } from "./routers/HotelOptions";
 
 function App() {
   return (
     <div>
-      Start Here
+      <HotelOptions />
       {/* Comments Everything You write in this file */}
     </div>
   );
