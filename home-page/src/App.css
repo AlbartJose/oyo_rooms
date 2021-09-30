@@ -148,7 +148,43 @@
 .react-google-flight-datepicker .date-picker {
   padding: 2px !important;
 }
-
+.react-google-flight-datepicker .day.selected.hovered::after {
+  border-radius: 100%;
+  background-color: #df293a !important;
+}
+.react-google-flight-datepicker .day.hovered {
+  background: #fce0de !important;
+  border-radius: unset;
+}
+.react-google-flight-datepicker .day.selected::after {
+  background-color: #df293a !important;
+  border-radius: 100%;
+}
+.react-google-flight-datepicker .day:hover::after {
+  background-color: #fff;
+  border: 2px solid #df293a !important;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+}
+.react-google-flight-datepicker .icon-calendar {
+  fill: #df293a !important;
+}
+.react-google-flight-datepicker .date:focus,
+.react-google-flight-datepicker .date.is-focus {
+  background-color: #fce0de !important;
+}
+.react-google-flight-datepicker .date.is-focus::after {
+  border: 2px solid #df293a !important;
+  z-index: -10;
+}
+.react-google-flight-datepicker .dialog-footer .submit-button {
+  background-color: #df293a !important;
+}
+.react-google-flight-datepicker .day .background-day.last-day {
+  background: linear-gradient(to left, #fff, #fce0de) !important;
+}
 .rooms {
   height: 60px;
   background-color: #fff;
@@ -157,6 +193,7 @@
   align-items: center;
   padding: 0 25px;
   margin-left: -5px;
+  cursor: pointer;
 }
 .rooms + button {
   width: 171px;
@@ -484,4 +521,46 @@
   /* Neutral white */
 
   color: #f4fcfe;
+}
+/* rooms div when clicked */
+
+.roomsDiv div:nth-of-type(1),
+.roomsDiv div:nth-of-type(2),
+.roomsDiv div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.roomsDiv {
+  position: absolute;
+  width: 290px;
+  height: 172px;
+  right: 110px;
+  top: 70px;
+  padding: 15px 25px;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.room-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+}
+.room-counter button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #636363;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.room-counter p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
 }
