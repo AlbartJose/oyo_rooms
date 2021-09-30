@@ -64,6 +64,8 @@
   width: 24px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 16px;
   margin-right: 18px;
 }
 .payDetailHeadB2 {
@@ -75,7 +77,7 @@
 .payFillInputB1 {
   margin: 20px 52px 20px 71px;
   width: 617px;
-  height: 300px;
+  /* height: 300px; */
 }
 
 .payFillInputB1Note {
@@ -102,6 +104,10 @@
   padding: 14px;
   width: 250px;
 }
+
+.payInpBoxes {
+  height: max-content;
+}
 .payInpBoxes > div {
   float: left;
   margin-top: 30px;
@@ -115,7 +121,6 @@
   width: 236px;
   padding: 12px 0px;
   text-align: center;
-  background: #e5e5e5;
   box-shadow: 0px 0px 40px 3px rgba(211, 211, 211, 0.23);
   border-radius: 4px;
   font-weight: bold;
@@ -142,6 +147,8 @@
   border-radius: 4px;
   height: 24px;
   width: 24px;
+  align-items: center;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   margin-right: 18px;
@@ -165,6 +172,7 @@
 .paymentB1Side > div {
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
 }
 
 .paySideImg {
@@ -246,4 +254,213 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+}
+
+.payCompleteOpen {
+  margin-top: 20px;
+  height: 538px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 100px;
+}
+
+.payCompleteFlex {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.payCompleteB1 {
+  height: 425px;
+  width: 230px;
+}
+
+.payCompleteB2 {
+  height: 425px;
+  width: 380px;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.payCompleteB1 > div {
+  height: 53px;
+  width: 198px;
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #bcbcbc;
+}
+
+.payCompletePayNow {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 6px 20px 4px rgba(240, 240, 240, 0.8);
+  border: 1px solid #f0f0f0;
+  color: black !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+}
+
+.payCompleteSelect {
+  font-weight: 600 !important;
+  border: 1px solid #f0f0f0;
+  color: black !important;
+}
+
+.cardAddNew {
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 25px;
+}
+
+.payCardDetails {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.cardinputA {
+  height: 48px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 1px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.cardinputA > input {
+  border: none;
+  margin: 0px;
+  outline: none;
+  letter-spacing: -0.005em;
+}
+
+.cardinpValidThru {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.005em;
+  color: #d3d3d3;
+  padding-right: 10px;
+}
+
+.cardinpValidThru ~ input {
+  width: 70px;
+  margin: 0px 8px;
+  padding: 0px 8px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin: 0px 4px;
+}
+
+.cardinpcvv {
+  position: relative;
+  top: -13px;
+  left: 24px;
+  width: 83px;
+  height: 48px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 1px;
+}
+.cardinpcvv > input {
+  border: none;
+  margin: 0px;
+  outline: none;
+  letter-spacing: -0.005em;
+  width: 50px;
+}
+
+.cardSaveForLater {
+  font-size: 12px;
+  color: #6d787d;
+  padding-left: 10px;
+}
+
+.cardButtonPay {
+  margin-top: 25px !important;
+}
+
+.cardWeAccept {
+  margin-top: 5px;
+  display: flex;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.005em;
+  color: #858585;
+}
+.cardWeAccept > div {
+  margin-right: 8px;
+}
+
+.payInpClosed {
+  height: 112px;
+  width: 741px;
+  box-sizing: border-box;
+  padding: 18px;
+  border: 0.5px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.payInpClosedB1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.payInpClosedB1 > div {
+  display: flex;
+}
+
+.payInpClosedB1 + div {
+  display: flex;
+  margin-left: 30px;
+}
+
+.payInpClosedB1 + div > div {
+  padding: 0px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.payInpSq {
+  width: 24px;
+  height: 24px;
+  background: #e8f0fe;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+  color: #1ab64f;
+}
+.payInpSq + div {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.payInpModify {
+  padding: 10px;
+  border: 0.5px solid #f0f0f0;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ee2e24;
 }

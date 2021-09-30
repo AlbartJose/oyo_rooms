@@ -3,8 +3,11 @@ import { PaymentDetail } from "./PaymentDetail";
 import { PaymentCompleteClosed } from "./PaymentCompleteClosed";
 import { PaymentSide } from "./PaymentSide";
 import { PaymentCompleteOpen } from "./PaymentCompleteOpen";
+import { PaymentInpDetail } from "./PaymentInpDetail";
+import { useState } from "react";
 
 export function PaymentMain() {
+  const [cardOpen, setCardOpen] = useState(false);
   return (
     <div>
       <div className="headerPay"></div>
@@ -15,9 +18,17 @@ export function PaymentMain() {
             <div className="paySave">
               Yay! You just saved Rs 5437 on this booking!
             </div>
-            <PaymentDetail />
-            <PaymentCompleteClosed />
-            <PaymentCompleteOpen />
+            {cardOpen ? (
+              <>
+                <PaymentInpDetail setCardOpen={setCardOpen} />
+                <PaymentCompleteOpen />
+              </>
+            ) : (
+              <>
+                <PaymentDetail setCardOpen={setCardOpen} />
+                <PaymentCompleteClosed />
+              </>
+            )}
           </div>
           <PaymentSide />
         </div>

@@ -1,9 +1,10 @@
-import { PaymentMain } from "./Components/Payment/PaymentMain";
+
+import { RouteMain } from "./Routes/RouteMain";
 
 function App() {
   return (
     <div>
-      <PaymentMain />
+      <RouteMain />
     </div>
   );
 }
