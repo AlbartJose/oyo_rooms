@@ -1,11 +1,13 @@
-import {Card} from "./components/Card"
+import {RoomDetails} from "./components/RoomDetail/RoomDetails"
 
 function App() {
   return (
     <div>
-      Start Here
+
+    <RoomDetails/>
+      
       {/* cards */}
-      <Card/>
+      
       {/* Comments Everything You write in this file */}
     </div>
   );

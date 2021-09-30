@@ -1,0 +1,8 @@
+.carousel-img img{
+    height:464px;
+    width:50%;
+    margin-Left:2px
+}
+.carousel-img{
+    display:flex
+}
