@@ -1,7 +1,98 @@
+import styled from "styled-components";
 export const FooterTwo = () => {
+  const Footer = styled.div`
+    & .footer-sec1 div:nth-of-type(2) button {
+      width: 173px;
+      height: 48px;
+      background: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+    }
+    & .footer-sec1 div:nth-of-type(2) button img {
+      margin-right: 5px;
+    }
+    & .footer-sec1 div:nth-of-type(1) > *,
+    & .footer-sec1 div:nth-of-type(2) > * {
+      margin-right: 15px;
+    }
+    & .footer-sec2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 80px;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    }
+    & .footer-sec2 div:nth-of-type(1) {
+      border: none;
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
+    & .footer-sec2 div:nth-of-type(1) p {
+      width: 180%;
+      margin-bottom: 10px;
+    }
+
+    & .footer-sec2 div:nth-of-type(2) {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 40%;
+      border-right: 1px solid hsla(0, 0%, 100%, 0.5);
+      padding-left: 45px;
+      border-left: 1px solid hsla(0, 0%, 100%, 0.5);
+    }
+    & .footer-sec2 div:nth-of-type(2) p {
+      margin: 10px;
+    }
+    & .footer-sec2 div:nth-of-type(2) p:hover {
+      text-decoration: underline;
+    }
+    & .footer-sec2 div:nth-of-type(3) p {
+      margin: 20px;
+    }
+    & .footer-sec2 div:nth-of-type(3) p:hover {
+      text-decoration: underline;
+    }
+    & .footer-sec3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 35px;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    }
+    & .footer-sec3 p {
+      margin-top: 15px;
+    }
+    & .footer-sec4-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    & .footer-sec4 {
+      padding: 35px;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    }
+    & .footer-sec4 p {
+      margin: 15px;
+    }
+    & .footer-sec4 p:hover {
+      text-decoration: underline;
+    }
+    & .footer-sec5 {
+      padding: 35px 35px 0px 35px;
+    }
+    & .footer-sec5 img {
+      margin-right: 25px;
+      cursor: pointer;
+    }
+  `;
+
   return (
     <>
-      <div className="footer">
+      <Footer>
         <div className="footer-sec1">
           <div>
             <img src="/images/UnionWhite.png" alt="UnionWhite" />
@@ -62,7 +153,7 @@ export const FooterTwo = () => {
           <img src="/images/MediaIcon.png" alt="img" />
           <img src="/images/PinIcon.png" alt="img" />
         </div>
-      </div>
+      </Footer>
     </>
   );
 };
