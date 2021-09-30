@@ -12,10 +12,13 @@ const LeftDiv = styled.div`
   flex-direction: column;
   padding: 2%;
   width: 30%;
+  position: sticky;
+  position: -webkit-sticky;
 `;
 const RightDiv = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 export const HotelOptions = () => {
