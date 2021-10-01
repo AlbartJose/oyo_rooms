@@ -5,10 +5,12 @@ import Locations from "./components/Locations";
 import NavbarHome from "./components/NavbarHome";
 import SearchField from "./components/SearchField";
 import WorldwideMarketing from "./components/WorldwideMarketing";
+import StickyNavbar from "./components/StickyNavbar";
 
 function App() {
   return (
     <div className="App">
+      <StickyNavbar />
       <NavbarHome />
       <Locations />
       <SearchField />
