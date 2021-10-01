@@ -19,7 +19,7 @@ function NavbarHome() {
             </div>
             <div>
               <Link to="/" className="login-signup">
-                <img src="/images/loginLOGO.png" alt="loginLOGO" />
+                <img src="/images/profile.png" alt="profile" />
                 <p>Login / Signup</p>
               </Link>
             </div>

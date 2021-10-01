@@ -26,7 +26,7 @@ export function PaymentSide({ initVar }) {
       </div>
       <div className="margin30">
         <div className="paySideIcon paySideFont14">
-          <img src="./Images/Payment/Calendar.svg" alt="" />
+          <img src="./Images/Payment/Group 24.svg" alt="" />
           {payData.date}
         </div>
         <div className="paySideFont14">{payData.room}</div>

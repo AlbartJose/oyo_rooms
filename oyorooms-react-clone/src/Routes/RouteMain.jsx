@@ -1,6 +1,8 @@
 import { Route, Switch } from "react-router-dom";
 import { PaymentMain } from "../Components/Payment/PaymentMain";
 import HomeMain from "../Components/Home/HomeMain";
+import { RoomDetails } from "../Components/RoomDetail/RoomDetails";
+import { HotelOptions } from "../Components/HotelOptions";
 
 export function RouteMain() {
   return (
@@ -8,6 +10,12 @@ export function RouteMain() {
       <Switch>
         <Route path="/" exact>
           <HomeMain />
+        </Route>
+        <Route path="/hotels">
+          <HotelOptions />
+        </Route>
+        <Route path="/hoteldetail">
+          <RoomDetails />
         </Route>
         <Route path="/contact">Contact Page</Route>
         <Route path="/about-us">About Page</Route>

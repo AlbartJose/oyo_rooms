@@ -28,7 +28,6 @@ function Locations() {
             "Andheri East",
             "Vashi",
             "Thane",
-            "Thane",
             "Dadar",
             "Andheri",
             "Panvel",

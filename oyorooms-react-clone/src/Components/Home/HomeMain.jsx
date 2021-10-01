@@ -9,7 +9,7 @@ import WorldwideMarketing from "./WorldwideMarketing";
 
 function HomeMain() {
   return (
-    <div>
+    <div className="App">
       <NavbarHome />
       <Locations />
       <SearchField />
