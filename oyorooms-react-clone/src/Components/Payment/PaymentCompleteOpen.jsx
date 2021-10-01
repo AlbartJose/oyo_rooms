@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./PaymentStyle.css";
-import { useHistory } from "react-router-dom";
 
 var initcard = {
   card_name: "",
@@ -10,13 +9,12 @@ var initcard = {
   card_cvv: "",
 };
 
-export function PaymentCompleteOpen({ price }) {
-  const history = useHistory();
+export function PaymentCompleteOpen({ price, setConfirm }) {
   const [verifyCard, setVerifyCard] = useState(false);
   const [cardData, setCardData] = useState(initcard);
 
   function handleClick() {
-    if (verifyCard) history.push("/");
+    if (verifyCard) setConfirm(true);
   }
 
   useEffect(() => {

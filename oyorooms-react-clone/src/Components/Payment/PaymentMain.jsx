@@ -5,6 +5,7 @@ import { PaymentSide } from "./PaymentSide";
 import { PaymentCompleteOpen } from "./PaymentCompleteOpen";
 import { PaymentInpDetail } from "./PaymentInpDetail";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 var initVar = {
   name: "SPOT ON 46946 Hotel Aalishan",
@@ -19,12 +20,23 @@ var initVar = {
 };
 
 export function PaymentMain() {
+  const history = useHistory();
   const [payData] = useState(initVar);
   const [cardOpen, setCardOpen] = useState(false);
   const [user, setUser] = useState({});
+  const [confirm, setConfirm] = useState(false);
+
+  const handleleave = () => {
+    setConfirm(false);
+    history.push("/");
+  };
   return (
-    <div>
-      <div className="headerPay"></div>
+    <div className="payMain">
+      <div className="headerPay">
+        <div>
+          <img src="./Images/Payment/Union.svg" alt="" />
+        </div>
+      </div>
       <div className="paymentB1">
         <div className="payModify">{"< "} Modify your booking</div>
         <div className="payB1B1">
@@ -43,6 +55,7 @@ export function PaymentMain() {
                     Math.round((payData.price - payData.pdrop) / 20) +
                     399
                   }
+                  setConfirm={setConfirm}
                 />
               </>
             ) : (
@@ -55,6 +68,29 @@ export function PaymentMain() {
           <PaymentSide initVar={initVar} />
         </div>
       </div>
+
+      {confirm && (
+        <div className="payBlur">
+          <div>
+            <div className="paymentConfirmed">
+              <div className="payTick">
+                <img src="./Images/Payment/Group.svg" alt="" />
+              </div>
+              <div>Booking Confirmed</div>
+              <div>
+                You will receive a mail in your above mentioned email-ID
+              </div>
+              <div>View Order Details</div>
+              <button onClick={handleleave} className="payThankYou">
+                THANK YOU
+              </button>
+            </div>
+            <div>
+              <PaymentSide initVar={initVar} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
