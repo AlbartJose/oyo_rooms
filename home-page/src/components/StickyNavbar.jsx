@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className="sticky">
       {style()}
-      <StickyNav length="300">
+      <StickyNav length="265">
         <NavbarSticky />
       </StickyNav>
     </div>
