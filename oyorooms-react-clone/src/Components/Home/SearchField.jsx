@@ -48,11 +48,9 @@ function SearchField() {
           <RangeDatePicker
             startDate={new Date(2020, 0, 15)}
             endDate={new Date(2020, 1, 1)}
-            onChange={(startDate, endDate) =>
-              setonDateChange(startDate, endDate)
-            }
-            minDate={new Date(1900, 0, 1)}
-            maxDate={new Date(2100, 0, 1)}
+            // onChange={(startDate, endDate) =>
+            //   setonDateChange(startDate, endDate)
+            // }
           />
           <div className="rooms" onClick={handleRoomDIv}>
             <p>1 Room, 1 Guest</p>
