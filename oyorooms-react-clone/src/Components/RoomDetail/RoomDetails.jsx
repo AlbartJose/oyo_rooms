@@ -4,26 +4,44 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { hotels } from "../db";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
+import NavbarSticky from "../Home/NavbarSticky";
+import { FooterTwo } from "../FooterTwo";
 
 // import {Icons} from ".../public/Icons"
-
-
+const Div = styled.div`
+  & header > img {
+    padding: 20px;
+  }
+`;
 
 export function RoomDetails() {
   const { id } = useParams();
   const [pageData, setPageData] = useState([]);
- const [pageImg,setPageImg]=useState([])
+  const [pageImg, setPageImg] = useState([]);
   useEffect(() => {
     const data = hotels;
-    const images=data.hotel[id-1].images
-    setPageImg(images)
+    const images = data.hotel[id - 1].images;
+    setPageImg(images);
     // console.log(hotels.hotel);
     setPageData(data.hotel[id - 1]);
   }, []);
   // console.log(pageData.images)
-console.log(pageImg);
+  console.log(pageImg);
   return (
     <div>
+      <Div
+        style={{
+          position: "fixed",
+          zIndex: "999999999",
+          backgroundColor: "#fff",
+          width: "100%",
+          height: "70px",
+        }}
+      >
+        {/* <Navbar2 /> */}
+        <NavbarSticky />
+      </Div>
 
       <Slider arr={pageImg} />
       <>
@@ -72,7 +90,7 @@ console.log(pageImg);
                   />
                 </div>
                 <div>
-                  <img src={pageImg[0]} className="single-image-room" alt="" /> 
+                  <img src={pageImg[0]} className="single-image-room" alt="" />
                 </div>
               </div>
               <hr />
@@ -302,6 +320,7 @@ console.log(pageImg);
         );
         {/* })} */}
       </>
+      <FooterTwo />
     </div>
   );
 }

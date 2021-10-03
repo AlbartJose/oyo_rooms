@@ -1,8 +1,10 @@
 import { RangeDatePicker } from "react-google-flight-datepicker";
 import "react-google-flight-datepicker/dist/main.css";
 import React, { useState, useRef, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 function NavbarSticky() {
+  const history = useHistory();
   const [roomCounter, setroomCounter] = useState(1);
   const [rooms, setrooms] = useState(false);
   const [roomsNum, setroomsNum] = useState(1);
@@ -29,7 +31,13 @@ function NavbarSticky() {
   return (
     <>
       <header className="nav-sticky">
-        <img src="./images/Union.png" alt="Union" />
+        <img
+          onClick={() => {
+            history.push("/");
+          }}
+          src="/Images/Union.png"
+          alt="Union"
+        />
         <div className="nav-sticky-container">
           <input
             type="text"
