@@ -1,3 +1,10 @@
+.payMain {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  height: 900px;
+}
+
 .headerPay {
   position: fixed;
   top: 0px;
@@ -5,6 +12,10 @@
   height: 70px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  padding: 14px 80px;
+  display: flex;
+  align-items: center;
 }
 
 .paymentB1 {
@@ -167,6 +178,7 @@
   padding: 48px 24px 0px 24px;
   background: #ffffff;
   box-shadow: 0px 0px 40px 3px rgba(240, 240, 240, 0.8);
+  border-radius: 12px 12px 12px 12px;
 }
 
 .paymentB1Side > div {
@@ -238,6 +250,7 @@
 }
 
 .paySideFinalAmt {
+  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -251,6 +264,7 @@
 }
 
 .payAmt {
+  margin-top: 30px;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
@@ -260,7 +274,7 @@
   margin-top: 20px;
   height: 538px;
   border: 1px solid #f0f0f0;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .payCompleteFlex {
@@ -462,5 +476,96 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  color: #ee2e24;
+}
+
+.payBlur {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+  height: 920px;
+  background: rgba(66, 66, 66, 0.72);
+  backdrop-filter: blur(17px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payBlur > div {
+  position: absolute;
+  width: 890px;
+  height: 567px;
+  box-shadow: 0px 6px 40px 4px rgba(66, 66, 66, 0.56);
+  border-radius: 12px;
+  background-color: white;
+  z-index: 120;
+  display: flex;
+}
+.payBlur > div > div {
+  height: 567px;
+  width: 445px;
+  box-sizing: border-box;
+}
+
+.paymentConfirmed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payTick {
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+.payTick + div {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.payTick + div + div {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+
+.payTick + div + div + div {
+  font-size: 14px;
+  line-height: 17px;
+  color: #2196f3;
+  margin-bottom: 170px;
+}
+
+.payThankYou {
+  background: #1ab64f;
+  box-shadow: 0px 4px 4px rgba(96, 182, 126, 0.12);
+  border-radius: 4px;
+  padding: 20px 55px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.verifytimer {
+  margin-top: 49px;
+  margin-left: 10px;
+  height: 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
   color: #ee2e24;
 }

@@ -1,6 +1,7 @@
 import "./PaymentStyle.css";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import Counter from "./Counter";
 
 const PayInput = styled.input`
   font-weight: 500;
@@ -25,6 +26,7 @@ export function PaymentDetail({ setCardOpen, setUser }) {
   const [verifyCode, setVerifyCode] = useState(false);
   const [sendCode, setSendCode] = useState(false);
   const [userData, setUserData] = useState(initData);
+  const [isTimer, setIsTimer] = useState(false);
 
   useEffect(() => {
     if (
@@ -33,8 +35,9 @@ export function PaymentDetail({ setCardOpen, setUser }) {
       userData.mobile.length >= 10
     )
       setVerifyData(true);
-    if (userData.code.length === 4) setVerifyCode(true);
-  }, [userData]);
+    if (userData.code.length === 4 && isTimer) setVerifyCode(true);
+    else setVerifyCode(false);
+  }, [isTimer, userData]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,7 +46,10 @@ export function PaymentDetail({ setCardOpen, setUser }) {
   };
 
   function handleClick() {
-    if (verifyData) setSendCode(true);
+    if (verifyData) {
+      setSendCode(true);
+      setIsTimer(true);
+    }
   }
 
   function handleCardOped() {
@@ -52,6 +58,10 @@ export function PaymentDetail({ setCardOpen, setUser }) {
       setCardOpen(true);
     }
   }
+
+  const handleResend = () => {
+    setIsTimer(true);
+  };
 
   return (
     <div
@@ -112,20 +122,39 @@ export function PaymentDetail({ setCardOpen, setUser }) {
           </div>
           {sendCode ? (
             <div>
-              <div>
-                <div className="paylabel">Enter 4 digit passcode</div>
-                <PayInput
-                  onChange={handleInputChange}
-                  name="code"
-                  style={
-                    verifyCode
-                      ? { backgroundColor: "#e8f0fe" }
-                      : { backgroundColor: "white" }
-                  }
-                  type="text"
-                  placeholder="4-digit"
-                />
+              <div style={{ display: "flex" }}>
+                <div>
+                  <div className="paylabel">Enter 4 digit passcode</div>
+                  <PayInput
+                    onChange={handleInputChange}
+                    name="code"
+                    style={
+                      verifyCode
+                        ? { backgroundColor: "#e8f0fe", width: "236px" }
+                        : { backgroundColor: "white", width: "236px" }
+                    }
+                    type="text"
+                    placeholder="4-digit"
+                  />
+                </div>
+                <div className="verifytimer">
+                  {isTimer ? (
+                    <div>
+                      <Counter
+                        initTime={30}
+                        finalTime={0}
+                        setIsTimer={setIsTimer}
+                      />
+                    </div>
+                  ) : (
+                    <div onClick={handleResend}>
+                      <div>Resend</div>
+                      <div>Code</div>
+                    </div>
+                  )}
+                </div>
               </div>
+
               <button
                 onClick={() => {
                   handleCardOped();

@@ -4,9 +4,11 @@ import { PaymentCompleteClosed } from "./PaymentCompleteClosed";
 import { PaymentSide } from "./PaymentSide";
 import { PaymentCompleteOpen } from "./PaymentCompleteOpen";
 import { PaymentInpDetail } from "./PaymentInpDetail";
+
 import { useState, useEffect } from "react";
 import { hotels } from "../db";
 import { useParams, useHistory } from "react-router-dom";
+
 var initVar = {
   name: "SPOT ON 46946 Hotel Aalishan",
   poster: "./Images/Payment/payaali1.jpg",
@@ -21,6 +23,16 @@ var initVar = {
 
 export function PaymentMain() {
   const history = useHistory();
+
+  const [payData] = useState(initVar);
+
+  const [confirm, setConfirm] = useState(false);
+
+  const handleleave = () => {
+    setConfirm(false);
+    history.push("/");
+  };
+
   const { id } = useParams();
   const [payDataDetail, setPayDataDetail] = useState({});
   const [payImg,setPayImg]=useState([])
@@ -40,9 +52,14 @@ export function PaymentMain() {
     // console.log(payDataDetail);
     console.log(id);
   }, []);
+
   return (
-    <div>
-      <div className="headerPay"></div>
+    <div className="payMain">
+      <div className="headerPay">
+        <div>
+          <img src="./Images/Payment/Union.svg" alt="" />
+        </div>
+      </div>
       <div className="paymentB1">
         <div className="payModify" onClick={handleGoBack}>
           {"< "} Modify your booking
@@ -62,6 +79,7 @@ export function PaymentMain() {
                     Math.round(payDataDetail.price / 20) +
                     399
                   }
+                  setConfirm={setConfirm}
                 />
               </>
             ) : (
@@ -75,6 +93,29 @@ export function PaymentMain() {
 
         </div>
       </div>
+
+      {confirm && (
+        <div className="payBlur">
+          <div>
+            <div className="paymentConfirmed">
+              <div className="payTick">
+                <img src="./Images/Payment/Group.svg" alt="" />
+              </div>
+              <div>Booking Confirmed</div>
+              <div>
+                You will receive a mail in your above mentioned email-ID
+              </div>
+              <div>View Order Details</div>
+              <button onClick={handleleave} className="payThankYou">
+                THANK YOU
+              </button>
+            </div>
+            <div>
+              <PaymentSide initVar={initVar} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
