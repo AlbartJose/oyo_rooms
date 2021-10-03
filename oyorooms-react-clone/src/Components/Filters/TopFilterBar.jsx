@@ -87,12 +87,18 @@ export const TopFilterBar = () => {
       </div>
       <div>
         <div>
-          <span>Map View </span>
-          <SwitchUnstyled component={Root} {...label} />
-        </div>
-        <div>
-          <span>Sort By </span>
-          <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <p>Map View </p>
+          <div>
+            <SwitchUnstyled
+              component={Root}
+              {...label}
+              style={{ marginRight: "30px" }}
+            />
+          </div>
+          {/* </div>
+        <div> */}
+          <p>Sort By </p>
+          <FormControl sx={{ m: 1, minWidth: 100 }}>
             <Select
               value={age}
               onChange={handleChange}

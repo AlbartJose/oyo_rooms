@@ -14,18 +14,16 @@ const Div = styled.div`
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-export const Categories = () => {
+export const HostelFacilities = () => {
   return (
     <>
-      <p>Categories</p>
+      <p>Hostel Facilities</p>
       <Div>
         <div>
           <Checkbox {...label} />
         </div>
-
         <p>
-          OYO Rooms -{" "}
-          <span>Super affordable stays with essential amenities</span>
+          <span>Sitting Area</span>
         </p>
       </Div>
       <Div>
@@ -33,10 +31,7 @@ export const Categories = () => {
           <Checkbox {...label} />
         </div>
         <p>
-          Townhouse -{" "}
-          <span>
-            Your friendly, premium neighbouhood hotel - Serviced by OYO
-          </span>
+          <span>Balcony</span>
         </p>
       </Div>
       <Div>
@@ -44,8 +39,23 @@ export const Categories = () => {
           <Checkbox {...label} />
         </div>
         <p>
-          Flagship -{" "}
-          <span>Affordable hotels at Premium locations - Serviced by OYO</span>
+          <span>Full Sized Bed</span>
+        </p>
+      </Div>
+      <Div>
+        <div>
+          <Checkbox {...label} />
+        </div>
+        <p>
+          <span>King Sized bed</span>
+        </p>
+      </Div>
+      <Div>
+        <div>
+          <Checkbox {...label} />
+        </div>
+        <p>
+          <span>AC</span>
         </p>
       </Div>
     </>

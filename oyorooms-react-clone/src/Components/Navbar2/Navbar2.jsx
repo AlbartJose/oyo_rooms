@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 // import SearchField from "../Home/SearchField";
 import { RangeDatePicker } from "react-google-flight-datepicker";
-// import "react-google-flight-datepicker/dist/main.css";
+import "react-google-flight-datepicker/dist/main.css";
 import React, { useState, useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
@@ -18,20 +18,20 @@ const Search = styled.div`
   & .secondsearch-field {
     position: absolute;
     display: flex;
-    top: -150%;
+    top: -100%;
     /* left: 11%; */
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
   }
   & .secondsearch-field input {
-    width: 400px;
-    height: 50px;
+    width: 375px;
+    height: 40px;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     padding-left: 15px;
     /* border: none; */
+    border-color: #d3d3d3;
     margin-right: -2.5px;
     background: #ffffff;
     border-width: 1px;
@@ -40,52 +40,55 @@ const Search = styled.div`
   & .secondsearch-field input:focus {
     outline: none;
   }
-  /* & .secondreact-google-flight-datepicker .dialog-date-picker {
+  & .react-google-flight-datepicker .dialog-date-picker {
     width: 700px !important;
     z-index: 0;
   }
-  & .secondreact-google-flight-datepicker .date-picker {
+  & .react-google-flight-datepicker .date-picker {
     padding: 2px !important;
   }
-  & .secondreact-google-flight-datepicker .day.selected.hovered::after {
+  & .react-google-flight-datepicker .day.selected.hovered::after {
     border-radius: 100%;
     background-color: #df293a !important;
   }
-  & .secondreact-google-flight-datepicker .day.hovered {
+  & .react-google-flight-datepicker .day.hovered {
     background: #fce0de !important;
     border-radius: unset;
   }
-  & .secondreact-google-flight-datepicker .day.selected::after {
+  & .react-google-flight-datepicker .day.selected::after {
     background-color: #df293a !important;
     border-radius: 100%;
   }
-  & .secondreact-google-flight-datepicker .day:hover::after {
+  & .react-google-flight-datepicker .day:hover::after {
     background-color: #fff;
     border: 2px solid #df293a !important;
-    /* bottom: -2px;
+    bottom: -2px;
     left: -2px;
     right: -2px;
-    top: -2px; */
-  /* }
-  & .secondreact-google-flight-datepicker .icon-calendar {
+    top: -2px;
+  }
+  & .react-google-flight-datepicker .icon-calendar {
     fill: #df293a !important;
   }
-  & .secondreact-google-flight-datepicker .date:focus,
-  & .secondreact-google-flight-datepicker .date.is-focus {
+  & .react-google-flight-datepicker .date:focus,
+  & .react-google-flight-datepicker .date.is-focus {
     background-color: #fce0de !important;
   }
-  & .secondreact-google-flight-datepicker .date.is-focus::after {
+  & .react-google-flight-datepicker .date.is-focus::after {
     border: 0px solid #df293a !important;
-    z-index: -10;
+    z-index: -10px;
   }
-  & .secondreact-google-flight-datepicker .dialog-footer .submit-button {
+  & .react-google-flight-datepicker .dialog-footer .submit-button {
     background-color: #df293a !important;
   }
-  & .secondreact-google-flight-datepicker .day .background-day.last-day {
+  & .react-google-flight-datepicker .day .background-day.last-day {
     background: linear-gradient(to left, #fff, #fce0de) !important;
-  }  */
+  }
+  & .date-picker-input {
+    height: 40px;
+  }
   & .secondrooms {
-    height: 60px;
+    height: 40px;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -93,10 +96,11 @@ const Search = styled.div`
     padding: 0 25px;
     margin-left: -5px;
     cursor: pointer;
+    border: 1px solid #d3d3d3;
   }
   & .secondrooms + button {
-    width: 171px;
-    height: 60px;
+    width: 150px;
+    height: 40px;
     background: #1ab64f;
     box-shadow: 0px 4px 4px rgba(96, 182, 126, 0.12);
     border-radius: 4px;
@@ -111,6 +115,15 @@ const Search = styled.div`
   }
   & .secondrooms + button:hover {
     background: #128037;
+  }
+`;
+
+const Header = styled.header`
+  position: fixed;
+  z-index: 99999999;
+  background-color: #fff;
+  & .navbar-right-section > * {
+    border-right: none;
   }
 `;
 
@@ -145,7 +158,7 @@ export const Navbar2 = () => {
   });
   return (
     <>
-      <header>
+      <Header>
         <div className="master-div-navbar">
           <div className="navbar-logo">
             <img src="/images/Union.png" alt="Union" />
@@ -163,6 +176,7 @@ export const Navbar2 = () => {
                     placeholder="Search by city,hotel or neighbourhood"
                   />
                   <RangeDatePicker
+                    style={{ height: "40px" }}
                     startDate={new Date(2020, 0, 15)}
                     endDate={new Date(2020, 1, 1)}
                     // onChange={(startDate, endDate) =>
@@ -228,9 +242,9 @@ export const Navbar2 = () => {
 
             {/* <SearchField style={{ background: "none" }} /> */}
             <div>
-              <img src="/images/language.png" alt="language" />
+              <img src="/general-Icons/LanguageShort.svg" alt="language" />
             </div>
-            <div>
+            <div style={{ width: "300px", margin: 0 }}>
               <Link to="/" className="login-signup">
                 <img src="/images/profile.png" alt="profile" />
                 <p>Login / Signup</p>
@@ -238,7 +252,7 @@ export const Navbar2 = () => {
             </div>
           </div>
         </div>
-      </header>
+      </Header>
     </>
   );
 };

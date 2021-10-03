@@ -6,7 +6,7 @@ import { PaymentCompleteOpen } from "./PaymentCompleteOpen";
 import { PaymentInpDetail } from "./PaymentInpDetail";
 import { useState, useEffect } from "react";
 import { hotels } from "../db";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 var initVar = {
   name: "SPOT ON 46946 Hotel Aalishan",
   poster: "./Images/Payment/payaali1.jpg",
@@ -20,11 +20,17 @@ var initVar = {
 };
 
 export function PaymentMain() {
+  const history = useHistory();
   const { id } = useParams();
   const [payDataDetail, setPayDataDetail] = useState({});
   const [payImg,setPayImg]=useState([])
   const [cardOpen, setCardOpen] = useState(false);
   const [user, setUser] = useState({});
+
+  const handleGoBack = () => {
+    history.push("/hotels");
+  };
+
   useEffect(() => {
     const data = hotels;
     const images=data.hotel[id-1].images
@@ -38,7 +44,9 @@ export function PaymentMain() {
     <div>
       <div className="headerPay"></div>
       <div className="paymentB1">
-        <div className="payModify">{"< "} Modify your booking</div>
+        <div className="payModify" onClick={handleGoBack}>
+          {"< "} Modify your booking
+        </div>
         <div className="payB1B1">
           <div className="paymentB1Main">
             <div className="paySave">
@@ -63,7 +71,8 @@ export function PaymentMain() {
               </>
             )}
           </div>
-          <PaymentSide initVar={initVar} payImg={payImg} payDataDetail={payDataDetail} />
+ <PaymentSide initVar={initVar} payImg={payImg} payDataDetail={payDataDetail} />
+
         </div>
       </div>
     </div>
