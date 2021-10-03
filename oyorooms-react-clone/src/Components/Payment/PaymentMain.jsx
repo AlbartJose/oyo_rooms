@@ -35,7 +35,7 @@ export function PaymentMain() {
 
   const { id } = useParams();
   const [payDataDetail, setPayDataDetail] = useState({});
-  const [payImg,setPayImg]=useState([])
+  const [payImg, setPayImg] = useState([]);
   const [cardOpen, setCardOpen] = useState(false);
   const [user, setUser] = useState({});
 
@@ -45,8 +45,8 @@ export function PaymentMain() {
 
   useEffect(() => {
     const data = hotels;
-    const images=data.hotel[id-1].images
-    setPayImg(images)
+    const images = data.hotel[id - 1].images;
+    setPayImg(images);
     console.log(hotels.hotel);
     setPayDataDetail(data.hotel[id - 1]);
     // console.log(payDataDetail);
@@ -57,7 +57,13 @@ export function PaymentMain() {
     <div className="payMain">
       <div className="headerPay">
         <div>
-          <img src="./Images/Payment/Union.svg" alt="" />
+          <img
+            onClick={() => {
+              history.push("/");
+            }}
+            src="/Images/Payment/Union.svg"
+            alt=""
+          />
         </div>
       </div>
       <div className="paymentB1">
@@ -89,8 +95,11 @@ export function PaymentMain() {
               </>
             )}
           </div>
- <PaymentSide initVar={initVar} payImg={payImg} payDataDetail={payDataDetail} />
-
+          <PaymentSide
+            initVar={initVar}
+            payImg={payImg}
+            payDataDetail={payDataDetail}
+          />
         </div>
       </div>
 
@@ -111,7 +120,11 @@ export function PaymentMain() {
               </button>
             </div>
             <div>
-              <PaymentSide initVar={initVar} />
+              <PaymentSide
+                initVar={initVar}
+                payImg={payImg}
+                payDataDetail={payDataDetail}
+              />
             </div>
           </div>
         </div>

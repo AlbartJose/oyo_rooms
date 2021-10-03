@@ -181,19 +181,19 @@ export function PaymentCompleteOpen({ price, setConfirm }) {
             <div className="cardWeAccept">
               <div>We Accept</div>
               <div>
-                <img src="./Images/Payment/visa2.svg" alt="Hi" />
+                <img src="/Images/Payment/visa2.svg" alt="Hi" />
               </div>
               <div>
-                <img src="./Images/Payment/mastercard 2.svg" alt="Hi" />
+                <img src="/Images/Payment/mastercard 2.svg" alt="Hi" />
               </div>
               <div>
-                <img src="./Images/Payment/amex 2.svg" alt="Hi" />
+                <img src="/Images/Payment/amex 2.svg" alt="Hi" />
               </div>
               <div>
-                <img src="./Images/Payment/diners 2.svg" alt="Hi" />
+                <img src="/Images/Payment/diners 2.svg" alt="Hi" />
               </div>
               <div>
-                <img src="./Images/Payment/rupay 2.svg" alt="Hi" />
+                <img src="/Images/Payment/rupay 2.svg" alt="Hi" />
               </div>
             </div>
           </div>

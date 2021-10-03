@@ -43,18 +43,13 @@ function SearchField() {
         <div className="search-field">
           <input
             type="text"
-            placeholder="Search by city,hotel or neighbourhood"
+            placeholder="Search by city, hotel or neighbourhood"
           />
           <RangeDatePicker
-            startDate={new Date()}
-            endDate={new Date()}
+            startDate={new Date(2020, 0, 15)}
+            endDate={new Date(2020, 1, 1)}
             minDate={new Date(1900, 0, 1)}
             maxDate={new Date(2100, 0, 1)}
-            dateFormat="D"
-            monthFormat="MMM YYYY"
-            startDatePlaceholder="Start Date"
-            endDatePlaceholder="End Date"
-            startWeekDay="monday"
           />
           <div className="rooms" onClick={handleRoomDIv}>
             <p>1 Room, 1 Guest</p>
