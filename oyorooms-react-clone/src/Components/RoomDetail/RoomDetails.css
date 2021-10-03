@@ -1,0 +1,237 @@
+.product-details-parent-div{
+    display: flex;
+    padding: 0 40px;
+    position: relative;
+    height: 2136px;
+}
+.product-details-parent-div div{
+    margin: 20px;
+}
+.product-details-child-left-div{
+    padding-top: 10px;
+    /* margin-bottom: 20px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 63%;
+    /* border: 1px solid black; */
+}
+
+.product-details-child-right-div{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width:35%;
+    /* border: 1px solid black; */
+    position: sticky;
+    right: 50px;
+    top: 10px;
+    height: fit-content;
+
+}
+.spoton{
+    width: 68px;
+    height: 19px;
+    margin-right: 10px ;
+}
+.spotAndWizard{
+   
+    display: flex;
+    align-items: center;
+}
+.located{
+    font-size: 14px;
+    padding: 3px;
+    background-color: #FEF6E9;
+    color: #D38C17;
+    width: fit-content;
+    border: 1px solid #D38C17;
+}
+.redFont{
+    color: red;
+    font-weight: 500;
+}
+.amenities {
+    display: flex;
+
+    justify-content: space-between;
+}
+.amenities img{
+   
+    width: 50px;
+}
+.selected-category{
+    background-color: #6E797E;
+    color: white;
+    font-weight: 500;
+    padding-left: 20px;
+}
+.green-tick{
+    width: 30px;
+    margin-left: 10px;
+}
+.spotAndGreenTick{
+    display: flex;
+    align-items: center;
+    
+}
+.single-image-room{
+    width: 150px;
+    border-radius: 10px;
+}
+.selected-room-div{
+    display: flex;
+    justify-content: space-between;
+}
+.line-through{
+    font-weight: 300;
+    color: #BCBCBC;
+    text-decoration: line-through;
+}
+.selected-section{
+    display: flex;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+   
+}
+.policies{
+    justify-content: space-between;
+}
+.redDot{
+    width: 20px;
+    margin:12px 17px 15px;
+}
+.redDot + p{
+  margin-top: 10px;
+  font-weight: 500;
+}
+.map-section p{
+    margin-left: 20px;
+    font-weight: 500;
+}
+.map-img{
+    width: 300px;
+}
+.map{
+    justify-content: space-between;
+    font-weight: 500;
+}
+.cloud{
+    width: 40px;
+    padding-bottom: 10px;
+}
+.weather{
+    font-weight: 500;
+    justify-content: space-between;
+}
+.celcius{
+    margin: 0px;
+    line-height: 20px;
+}
+.detail-page-login{
+    padding: 0px 10px;
+    background-color: #D72E60;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    border-radius: 6px 6px 0px 0px;
+}
+.detail-page-login p{
+    margin-top:10px ;
+}
+.detail-page-login img{
+    width: 20px;
+    margin-right: 10px;
+}
+.detail-page-login button{
+    background-color: #F58875;
+    border: none;
+    color: white;
+    font-weight: 500;
+    height: 25px;
+    margin-right: 20px;
+    font-size: 13px;
+    padding:0px 10px;
+}
+.price p{
+    line-height: 0px;
+    font-size: 12px;
+    color: #BCBCBC;
+}
+.date-div {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.shadow{
+    padding: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.coupon-icon{
+    height: 25px;
+    padding: 3px;
+    margin-right: 9px;
+}
+.coupon-icon +p{
+    font-size: 13px;
+}
+.coupon-div{
+    justify-content: space-between;
+}
+.green{
+    margin:3px 10px;
+}
+.more-offers{
+    margin: 0px;
+    font-weight: 500;
+    border: 1px solid #1AB64F;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 5PX 10PX;
+    color: #1AB64F;
+    background-color: #D1F0DC;
+}
+.w{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.wizard-div{
+    font-size: 13px;
+}
+.wizard-div p{
+    margin-left: 10px;
+}
+.price-checkbox{
+    font-weight: 500;
+    width: 70px;
+    justify-content: space-between;
+}
+.price-checkbox input{
+    margin: 5px;
+}
+.special-price{
+    justify-content: space-between;
+    line-height: 0px;
+    font-weight: 600;
+}
+.special-div{
+    border: 2px dotted gray;
+}
+.saving{
+    justify-content: space-between;
+    font-weight: 500;
+}
+.continue-btn{
+    width: 320px;
+    border: none;
+    background-color: #1AB64F;
+    color: white;
+    font-weight: 700;
+    height: 40px;
+    margin-left:35px ;
+    border-radius: 5px;
+}
+/* body{
+    font-family: Inter;
+} */

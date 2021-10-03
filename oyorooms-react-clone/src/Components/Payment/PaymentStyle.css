@@ -1,0 +1,571 @@
+.payMain {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  height: 900px;
+}
+
+.headerPay {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  padding: 14px 80px;
+  display: flex;
+  align-items: center;
+}
+
+.paymentB1 {
+  margin: 117px auto;
+  width: 1220px;
+  height: 615px;
+}
+
+.payModify {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ee2e24;
+  margin-bottom: 24px;
+}
+
+.payB1B1 {
+  display: flex;
+}
+
+.paymentB1Main {
+  width: 741px;
+  margin-right: 34px;
+}
+
+.paySave {
+  width: 100%;
+  padding: 16px 0px;
+  font-size: 16px;
+  color: #d38c17;
+  background: #fef6e9;
+  border: 0.5px solid #d38c17;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payDetailB1 {
+  width: 741px;
+  height: 416px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+.payDetailHead {
+  width: 705px;
+  height: 24px;
+  background: #f0f0f0;
+  display: flex;
+  padding: 18px;
+}
+
+.payDetailHeadB1 {
+  color: white;
+  background: #222222;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 18px;
+}
+.payDetailHeadB2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.payFillInputB1 {
+  margin: 20px 52px 20px 71px;
+  width: 617px;
+  /* height: 300px; */
+}
+
+.payFillInputB1Note {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #858585;
+}
+
+.paylabel {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #424242;
+  margin-bottom: 27px;
+}
+.payinput {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 14px;
+  width: 250px;
+}
+
+.payInpBoxes {
+  height: max-content;
+}
+.payInpBoxes > div {
+  float: left;
+  margin-top: 30px;
+}
+.paymarginSpecial {
+  margin-right: 65px;
+}
+
+.payPasscode {
+  margin-top: 51px;
+  width: 236px;
+  padding: 12px 0px;
+  text-align: center;
+  box-shadow: 0px 0px 40px 3px rgba(211, 211, 211, 0.23);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.payCompleteClosed {
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  width: 705px;
+  height: 24px;
+  display: flex;
+  padding: 18px;
+}
+
+.payClosedB1 {
+  color: #ffffff;
+  background: #a6a6a6;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 18px;
+}
+
+.payClosedB2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #d8d8d8;
+}
+
+.paymentB1Side {
+  width: 397px;
+  height: 519px;
+  padding: 48px 24px 0px 24px;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px 3px rgba(240, 240, 240, 0.8);
+  border-radius: 12px 12px 12px 12px;
+}
+
+.paymentB1Side > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.paySideImg {
+  width: 80px;
+  height: 69px;
+  border: 1px solid #858585;
+  border-radius: 4px;
+}
+
+.paymentSideHead {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.paymentSideNew {
+  background: #52b520;
+  border-radius: 2px;
+  padding: 1px 8px;
+  color: white;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 18px;
+}
+
+.paymentSideDays {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 40px;
+}
+
+.paySideIcon {
+  display: flex;
+  align-items: center;
+}
+.paySideIcon > img {
+  margin-right: 10px;
+}
+
+.paySideFont14 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.paySideFont14SlightBold {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.margin30 {
+  margin-bottom: 30px;
+}
+
+.margin20 {
+  margin-bottom: 20px;
+}
+
+.paySideFinalAmt {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.paySideFinalSideHead {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #858585;
+}
+
+.payAmt {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.payCompleteOpen {
+  margin-top: 20px;
+  height: 538px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.payCompleteFlex {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.payCompleteB1 {
+  height: 425px;
+  width: 230px;
+}
+
+.payCompleteB2 {
+  height: 425px;
+  width: 380px;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.payCompleteB1 > div {
+  height: 53px;
+  width: 198px;
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #bcbcbc;
+}
+
+.payCompletePayNow {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 6px 20px 4px rgba(240, 240, 240, 0.8);
+  border: 1px solid #f0f0f0;
+  color: black !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+}
+
+.payCompleteSelect {
+  font-weight: 600 !important;
+  border: 1px solid #f0f0f0;
+  color: black !important;
+}
+
+.cardAddNew {
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 25px;
+}
+
+.payCardDetails {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.cardinputA {
+  height: 48px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 1px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.cardinputA > input {
+  border: none;
+  margin: 0px;
+  outline: none;
+  letter-spacing: -0.005em;
+}
+
+.cardinpValidThru {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.005em;
+  color: #d3d3d3;
+  padding-right: 10px;
+}
+
+.cardinpValidThru ~ input {
+  width: 70px;
+  margin: 0px 8px;
+  padding: 0px 8px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin: 0px 4px;
+}
+
+.cardinpcvv {
+  position: relative;
+  top: -13px;
+  left: 24px;
+  width: 83px;
+  height: 48px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 1px;
+}
+.cardinpcvv > input {
+  border: none;
+  margin: 0px;
+  outline: none;
+  letter-spacing: -0.005em;
+  width: 50px;
+}
+
+.cardSaveForLater {
+  font-size: 12px;
+  color: #6d787d;
+  padding-left: 10px;
+}
+
+.cardButtonPay {
+  margin-top: 25px !important;
+}
+
+.cardWeAccept {
+  margin-top: 5px;
+  display: flex;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.005em;
+  color: #858585;
+}
+.cardWeAccept > div {
+  margin-right: 8px;
+}
+
+.payInpClosed {
+  height: 112px;
+  width: 741px;
+  box-sizing: border-box;
+  padding: 18px;
+  border: 0.5px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.payInpClosedB1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.payInpClosedB1 > div {
+  display: flex;
+}
+
+.payInpClosedB1 + div {
+  display: flex;
+  margin-left: 30px;
+}
+
+.payInpClosedB1 + div > div {
+  padding: 0px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.payInpSq {
+  width: 24px;
+  height: 24px;
+  background: #e8f0fe;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+  color: #1ab64f;
+}
+.payInpSq + div {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.payInpModify {
+  padding: 10px;
+  border: 0.5px solid #f0f0f0;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ee2e24;
+}
+
+.payBlur {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+  height: 920px;
+  background: rgba(66, 66, 66, 0.72);
+  backdrop-filter: blur(17px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payBlur > div {
+  position: absolute;
+  width: 890px;
+  height: 567px;
+  box-shadow: 0px 6px 40px 4px rgba(66, 66, 66, 0.56);
+  border-radius: 12px;
+  background-color: white;
+  z-index: 120;
+  display: flex;
+}
+.payBlur > div > div {
+  height: 567px;
+  width: 445px;
+  box-sizing: border-box;
+}
+
+.paymentConfirmed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payTick {
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+.payTick + div {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.payTick + div + div {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+
+.payTick + div + div + div {
+  font-size: 14px;
+  line-height: 17px;
+  color: #2196f3;
+  margin-bottom: 170px;
+}
+
+.payThankYou {
+  background: #1ab64f;
+  box-shadow: 0px 4px 4px rgba(96, 182, 126, 0.12);
+  border-radius: 4px;
+  padding: 20px 55px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.verifytimer {
+  margin-top: 49px;
+  margin-left: 10px;
+  height: 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ee2e24;
+}
