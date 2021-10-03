@@ -8,6 +8,7 @@ import { COVID } from "./COVID";
 import { Navbar2 } from "../Components/Navbar2/Navbar2";
 import { hotels } from "./db";
 import { useState, useEffect } from "react";
+import NavbarSticky from "./Home/NavbarSticky";
 
 const MainDiv = styled.div`
   display: flex;
@@ -29,6 +30,12 @@ const RightDiv = styled.div`
   padding: 2%;
 `;
 
+const Div = styled.div`
+  & header > img {
+    padding: 20px;
+  }
+`;
+
 export const HotelOptions = () => {
   const [cardData, setCardData] = useState([]);
 
@@ -39,9 +46,18 @@ export const HotelOptions = () => {
   }, []);
   return (
     <div style={{ position: "realtive" }}>
-      <div>
-        <Navbar2 />
-      </div>
+      <Div
+        style={{
+          position: "fixed",
+          zIndex: "999999999",
+          backgroundColor: "#fff",
+          width: "100%",
+          height: "70px",
+        }}
+      >
+        {/* <Navbar2 /> */}
+        <NavbarSticky />
+      </Div>
       <div style={{ position: "absolute", marginTop: "75px" }}>
         <COVID />
         <MainDiv>
