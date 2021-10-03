@@ -3,6 +3,8 @@ import { SlideBar } from "./SlideBar";
 import styled from "styled-components";
 import { Categories } from "./Categories";
 import { Collections } from "./Collections";
+import { AccomodationType } from "./AccomodationType";
+import { HostelFacilities } from "./HostelFacilities";
 
 const P1 = styled.p`
   font-size: 20px;
@@ -30,7 +32,7 @@ const ComponentDiv = styled.div`
 
 export const Filters = () => {
   return (
-    <>
+    <div style={{ position: "sticky", top: "-700px", marginTop: "-10%" }}>
       <ComponentDiv>
         <P1>Filters</P1>
         <P2>Popular locations in Nagpur, Maharashtra, India</P2>
@@ -46,6 +48,12 @@ export const Filters = () => {
       <ComponentDiv>
         <Categories />
       </ComponentDiv>
-    </>
+      <ComponentDiv>
+        <AccomodationType />
+      </ComponentDiv>
+      <ComponentDiv>
+        <HostelFacilities />
+      </ComponentDiv>
+    </div>
   );
 };

@@ -19,7 +19,6 @@ export function PaymentSide({ initVar, payDataDetail }) {
   const [payData] = useState(initVar);
 
   // console.log(payDataDetail);
-  console.log(payDataDetail.images);
 
   return (
     <div className="paymentB1Side">
@@ -30,7 +29,7 @@ export function PaymentSide({ initVar, payDataDetail }) {
           <div className="paymentSideDays">{payData.days} Nights</div>
         </div>
         <PayImgDiv>
-          {/* <img src={payDataDetail.images[0]} alt="" /> */}
+          <img src={payDataDetail.poster} alt="" />
         </PayImgDiv>
       </div>
       <div className="margin30">

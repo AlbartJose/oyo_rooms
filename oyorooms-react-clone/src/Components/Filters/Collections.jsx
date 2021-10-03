@@ -26,6 +26,30 @@ export const Collections = () => {
           <span>Sanitized before your eyes</span>
         </p>
       </Div>
+      <Div>
+        <div>
+          <Checkbox {...label} />
+        </div>
+        <p>
+          <span>Vaccinated Staff</span>
+        </p>
+      </Div>
+      <Div>
+        <div>
+          <Checkbox {...label} />
+        </div>
+        <p>
+          <span>Local IDs Accepted</span>
+        </p>
+      </Div>
+      <Div>
+        <div>
+          <Checkbox {...label} />
+        </div>
+        <p>
+          <span>OYO Welcomes Couples</span>
+        </p>
+      </Div>
     </>
   );
 };

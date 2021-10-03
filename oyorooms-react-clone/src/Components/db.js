@@ -2,6 +2,8 @@ export const hotels = {
   hotel: [
     {
       id: 1,
+      poster:
+        "https://images.oyoroomscdn.com/uploads/hotel_image/107750/large/7df242e6af32ec64.jpg",
       images: [
         "https://images.oyoroomscdn.com/uploads/hotel_image/107750/large/7df242e6af32ec64.jpg",
         "https://images.oyoroomscdn.com/uploads/hotel_image/107750/large/bd8d99c4d6bddacd.jpg",
@@ -17,6 +19,8 @@ export const hotels = {
     },
     {
       id: 2,
+      poster:
+        "https://images.oyoroomscdn.com/uploads/hotel_image/114925/large/682e0e11516478f9.jpg",
       images: [
         "https://images.oyoroomscdn.com/uploads/hotel_image/114925/large/682e0e11516478f9.jpg",
         "https://images.oyoroomscdn.com/uploads/hotel_image/114925/large/efb7fd1b7c796300.jpg",
@@ -33,6 +37,8 @@ export const hotels = {
     },
     {
       id: 3,
+      poster:
+        "https://images.oyoroomscdn.com/uploads/hotel_image/95621/large/5cbc33b4f76ab598.jpg",
       images: [
         "https://images.oyoroomscdn.com/uploads/hotel_image/95621/large/5cbc33b4f76ab598.jpg",
         "https://images.oyoroomscdn.com/uploads/hotel_image/95621/large/35a9be751618bfc8.jpg",

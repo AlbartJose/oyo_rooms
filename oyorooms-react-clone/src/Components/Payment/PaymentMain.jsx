@@ -70,7 +70,11 @@ export function PaymentMain() {
               </>
             )}
           </div>
-          <PaymentSide initVar={initVar} payDataDetail={payDataDetail} />
+          <PaymentSide
+            initVar={initVar}
+            payDataDetail={payDataDetail}
+            key={payDataDetail.id}
+          />
         </div>
       </div>
     </div>

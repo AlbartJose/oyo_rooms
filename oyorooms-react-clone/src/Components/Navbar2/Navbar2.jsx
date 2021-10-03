@@ -18,7 +18,7 @@ const Search = styled.div`
   & .secondsearch-field {
     position: absolute;
     display: flex;
-    top: -150%;
+    top: -100%;
     /* left: 11%; */
     justify-content: center;
     align-items: center;
@@ -31,6 +31,7 @@ const Search = styled.div`
     line-height: 20px;
     padding-left: 15px;
     /* border: none; */
+    border-color: #d3d3d3;
     margin-right: -2.5px;
     background: #ffffff;
     border-width: 1px;
@@ -39,26 +40,26 @@ const Search = styled.div`
   & .secondsearch-field input:focus {
     outline: none;
   }
-  & .secondreact-google-flight-datepicker .dialog-date-picker {
+  & .react-google-flight-datepicker .dialog-date-picker {
     width: 700px !important;
     z-index: 0;
   }
-  & .secondreact-google-flight-datepicker .date-picker {
+  & .react-google-flight-datepicker .date-picker {
     padding: 2px !important;
   }
-  & .secondreact-google-flight-datepicker .day.selected.hovered::after {
+  & .react-google-flight-datepicker .day.selected.hovered::after {
     border-radius: 100%;
     background-color: #df293a !important;
   }
-  & .secondreact-google-flight-datepicker .day.hovered {
+  & .react-google-flight-datepicker .day.hovered {
     background: #fce0de !important;
     border-radius: unset;
   }
-  & .secondreact-google-flight-datepicker .day.selected::after {
+  & .react-google-flight-datepicker .day.selected::after {
     background-color: #df293a !important;
     border-radius: 100%;
   }
-  & .secondreact-google-flight-datepicker .day:hover::after {
+  & .react-google-flight-datepicker .day:hover::after {
     background-color: #fff;
     border: 2px solid #df293a !important;
     bottom: -2px;
@@ -66,24 +67,24 @@ const Search = styled.div`
     right: -2px;
     top: -2px;
   }
-  & .secondreact-google-flight-datepicker .icon-calendar {
+  & .react-google-flight-datepicker .icon-calendar {
     fill: #df293a !important;
   }
-  & .secondreact-google-flight-datepicker .date:focus,
-  & .secondreact-google-flight-datepicker .date.is-focus {
+  & .react-google-flight-datepicker .date:focus,
+  & .react-google-flight-datepicker .date.is-focus {
     background-color: #fce0de !important;
   }
-  & .secondreact-google-flight-datepicker .date.is-focus::after {
+  & .react-google-flight-datepicker .date.is-focus::after {
     border: 0px solid #df293a !important;
-    z-index: 10000;
+    z-index: -10px;
   }
-  & .secondreact-google-flight-datepicker .dialog-footer .submit-button {
+  & .react-google-flight-datepicker .dialog-footer .submit-button {
     background-color: #df293a !important;
   }
-  & .secondreact-google-flight-datepicker .day .background-day.last-day {
+  & .react-google-flight-datepicker .day .background-day.last-day {
     background: linear-gradient(to left, #fff, #fce0de) !important;
   }
-  & .datepicker {
+  & .date-picker-input {
     height: 40px;
   }
   & .secondrooms {
@@ -95,6 +96,7 @@ const Search = styled.div`
     padding: 0 25px;
     margin-left: -5px;
     cursor: pointer;
+    border: 1px solid #d3d3d3;
   }
   & .secondrooms + button {
     width: 150px;
@@ -117,6 +119,9 @@ const Search = styled.div`
 `;
 
 const Header = styled.header`
+  position: fixed;
+  z-index: 99999999;
+  background-color: #fff;
   & .navbar-right-section > * {
     border-right: none;
   }

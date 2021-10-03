@@ -38,11 +38,11 @@ export const HotelOptions = () => {
     setCardData(data.hotel);
   }, []);
   return (
-    <>
-      <div style={{ postion: "fixed" }}>
+    <div style={{ position: "realtive" }}>
+      <div>
         <Navbar2 />
       </div>
-      <div>
+      <div style={{ position: "absolute", marginTop: "75px" }}>
         <COVID />
         <MainDiv>
           <LeftDiv>
@@ -58,6 +58,6 @@ export const HotelOptions = () => {
         </MainDiv>
         <FooterTwo />
       </div>
-    </>
+    </div>
   );
 };

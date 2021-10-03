@@ -216,7 +216,7 @@ export const HotelInfo = ({ key, data }) => {
               <Alert>Vaccinated staff. RT-PCR report required</Alert>
             </ItemHead>
             <div>
-              <Rating> {data.rating} ★</Rating>{" "}
+              <Rating> {data.rating} ★</Rating> <span> </span>
               <RateDiv> (300 Ratings) . Good</RateDiv>
             </div>
             <div style={{ marginTop: "10px" }}>
