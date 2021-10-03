@@ -41,7 +41,7 @@ function NavbarSticky() {
         <div className="nav-sticky-container">
           <input
             type="text"
-            placeholder="Search by city,hotel or neighbourhood"
+            placeholder="Search by city, hotel or neighbourhood"
           />
           <RangeDatePicker
             startDate={new Date(2020, 0, 15)}
@@ -104,7 +104,7 @@ function NavbarSticky() {
           <button style={{ width: "130px", height: "48px" }}>Search</button>
         </div>
         <div className="En">
-          <img src="/Images/general-Icons/LanguageShort.svg" alt="En" />
+          <img src="/general-Icons/LanguageShort.svg" alt="En" />
         </div>
         <div className="login-sticky">
           <img src="/images/profile.png" alt="profile" />

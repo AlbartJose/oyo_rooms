@@ -12,9 +12,9 @@ import { useParams, useHistory } from "react-router-dom";
 var initVar = {
   name: "SPOT ON 46946 Hotel Aalishan",
   poster: "./Images/Payment/payaali1.jpg",
-  days: 16,
+  days: "1",
   new: "true",
-  date: "Wed, 13 Oct - Fri, 29 Oct",
+  date: "Thu, 14 Oct - Fri, 15 Oct",
   room: "1 Room, 2 Guests",
   type: "SPOT ON NON-AC",
   price: 30722,
