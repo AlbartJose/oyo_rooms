@@ -36,8 +36,8 @@ const RDiv = styled.div`
   }
 `;
 
-export const ImageCarousel = () => {
-  const [img, setImg] = useState(images[0]);
+export const ImageCarousel = ({ data }) => {
+  const [img, setImg] = useState(data.images[0]);
 
   const handleImg = (e) => {
     console.log(e.target.src);
@@ -49,7 +49,7 @@ export const ImageCarousel = () => {
         <img src={img} alt="" />
       </LDiv>
       <RDiv>
-        {images.map((image) => (
+        {data.images.map((image) => (
           <img src={image} alt="" onClick={handleImg} />
         ))}
       </RDiv>

@@ -48,7 +48,7 @@ const Head = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 14px;
+  line-height: 18px;
   letter-spacing: -0.005em;
   text-align: left;
   color: #424242;
@@ -58,7 +58,7 @@ const Location = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1px;
+  line-height: 5px;
   letter-spacing: -0.005em;
   text-align: left;
   color: #424242;
@@ -73,7 +73,7 @@ const Rating = styled.div`
   border-radius: 5%;
   color: #ffffff;
   padding: 0 0.3%;
-  margin-top: 0;
+  margin: 2px 0;
 `;
 
 const Block = styled.div`
@@ -83,9 +83,11 @@ const Block = styled.div`
 
 const BottomDiv = styled.div`
   display: flex;
+  margin-top: 3%;
   /* justify-self: end; */
   /* align-items: flex-end; */
-  & > div {
+  & Button[variant="contained"]:hover {
+    background-color: #128037;
     /* justify-content: flex-end; */
   }
 `;
@@ -180,7 +182,7 @@ const P1 = styled.p`
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 8px;
   /* identical to box height */
 
   letter-spacing: -0.005em;
@@ -188,7 +190,7 @@ const P1 = styled.p`
   color: #636363;
 `;
 
-export const HotelInfo = ({ data }) => {
+export const HotelInfo = ({ key, data }) => {
   const history = useHistory();
 
   const handleViewDetails = () => {
@@ -202,7 +204,7 @@ export const HotelInfo = ({ data }) => {
     <>
       <Div>
         <LDiv>
-          <ImageCarousel />
+          <ImageCarousel key={key} data={data} />
         </LDiv>
         <RDiv>
           <Block>
@@ -214,11 +216,24 @@ export const HotelInfo = ({ data }) => {
               <Alert>Vaccinated staff. RT-PCR report required</Alert>
             </ItemHead>
             <div>
-              <Rating> {data.rating} ★</Rating>
-              <RateDiv>(300 Ratings) . Good</RateDiv>
+              <Rating> {data.rating} ★</Rating>{" "}
+              <RateDiv> (300 Ratings) . Good</RateDiv>
             </div>
-            <div>TV </div>
-            <TagDiv>
+            <div style={{ marginTop: "10px" }}>
+              <img
+                src="Images/Facilities.png"
+                alt=""
+                style={{ width: "auto", height: "20px" }}
+              />
+            </div>
+            <div style={{ marginTop: "10px" }}>
+              <img
+                src="Images/Qualities.png"
+                alt=""
+                style={{ width: "auto", height: "30px" }}
+              />
+            </div>
+            {/* <TagDiv>
               <Button
                 variant="outlined"
                 style={{
@@ -229,7 +244,7 @@ export const HotelInfo = ({ data }) => {
               >
                 Outlined
               </Button>
-            </TagDiv>
+            </TagDiv> */}
 
             <BottomDiv>
               <div style={{ alignSelf: "flex-end" }}>
@@ -239,7 +254,7 @@ export const HotelInfo = ({ data }) => {
                 <P1>per room per night</P1>
               </div>
               <Stack spacing={2} direction="row">
-                <div style={{ alignSelf: "flex-end", justifySelf: "end" }}>
+                <div style={{ justifySelf: "end" }}>
                   <Button
                     onClick={handleViewDetails}
                     variant="outlined"
@@ -247,6 +262,7 @@ export const HotelInfo = ({ data }) => {
                       color: "#424242",
                       borderColor: "#424242",
                       height: "70%",
+
                       // marginLeft: "40px",
                     }}
                   >
