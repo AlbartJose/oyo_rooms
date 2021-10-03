@@ -4,8 +4,9 @@ import { PaymentCompleteClosed } from "./PaymentCompleteClosed";
 import { PaymentSide } from "./PaymentSide";
 import { PaymentCompleteOpen } from "./PaymentCompleteOpen";
 import { PaymentInpDetail } from "./PaymentInpDetail";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { hotels } from "../db";
+import { useParams } from "react-router-dom";
 var initVar = {
   name: "SPOT ON 46946 Hotel Aalishan",
   poster: "./Images/Payment/payaali1.jpg",
@@ -19,9 +20,19 @@ var initVar = {
 };
 
 export function PaymentMain() {
+  const { id } = useParams();
+  const [payDataDetail, setPayDataDetail] = useState({});
+
   const [payData] = useState(initVar);
   const [cardOpen, setCardOpen] = useState(false);
   const [user, setUser] = useState({});
+  useEffect(() => {
+    const data = hotels;
+    console.log(hotels.hotel);
+    setPayDataDetail(data.hotel[id - 1]);
+    // console.log(payDataDetail);
+    console.log(id);
+  }, []);
   return (
     <div>
       <div className="headerPay"></div>
@@ -30,17 +41,16 @@ export function PaymentMain() {
         <div className="payB1B1">
           <div className="paymentB1Main">
             <div className="paySave">
-              Yay! You just saved Rs 5437 on this booking!
+              Yay! You just saved Rs {payDataDetail.price * 2} on this booking!
             </div>
             {cardOpen ? (
               <>
                 <PaymentInpDetail setCardOpen={setCardOpen} user={user} />
                 <PaymentCompleteOpen
                   price={
-                    payData.price -
-                    payData.pdrop -
-                    Math.round((payData.price - payData.pdrop) / 4) -
-                    Math.round((payData.price - payData.pdrop) / 20) +
+                    payDataDetail.price -
+                    Math.round(payDataDetail.price / 4) -
+                    Math.round(payDataDetail.price / 20) +
                     399
                   }
                 />
@@ -52,7 +62,7 @@ export function PaymentMain() {
               </>
             )}
           </div>
-          <PaymentSide initVar={initVar} />
+          <PaymentSide initVar={initVar} payDataDetail={payDataDetail} />
         </div>
       </div>
     </div>
