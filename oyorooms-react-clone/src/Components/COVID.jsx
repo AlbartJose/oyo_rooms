@@ -11,6 +11,8 @@ const Div = styled.div`
   line-height: 25px;
   /* identical to box height */
   text-align: center;
+  /* margin-top: 75px;
+  position: absolute; */
 `;
 
 export const COVID = () => {

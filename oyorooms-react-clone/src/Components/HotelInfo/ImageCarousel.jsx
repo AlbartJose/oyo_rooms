@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 const images = [
   "https://images.oyoroomscdn.com/uploads/hotel_image/92579/thumb/27498ea39fbf1f5a.jpg",
@@ -7,9 +8,6 @@ const images = [
   "https://images.oyoroomscdn.com/uploads/hotel_image/92579/thumb/48ac42d4fefcf542.jpg",
   "https://images.oyoroomscdn.com/uploads/hotel_image/92579/thumb/34e28101ded60c38.jpg",
 ];
-
-const img =
-  "https://images.oyoroomscdn.com/uploads/hotel_image/92579/medium/2d49ec12e16c0d99.jpg";
 
 const Div = styled.div`
   display: flex;
@@ -38,15 +36,21 @@ const RDiv = styled.div`
   }
 `;
 
-export const ImageCarousel = () => {
+export const ImageCarousel = ({ data }) => {
+  const [img, setImg] = useState(data.images[0]);
+
+  const handleImg = (e) => {
+    console.log(e.target.src);
+    setImg(e.target.src);
+  };
   return (
     <Div>
       <LDiv>
         <img src={img} alt="" />
       </LDiv>
       <RDiv>
-        {images.map((image) => (
-          <img src={image} alt="" />
+        {data.images.map((image) => (
+          <img src={image} alt="" onClick={handleImg} />
         ))}
       </RDiv>
     </Div>

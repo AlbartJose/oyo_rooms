@@ -87,12 +87,18 @@ export const TopFilterBar = () => {
       </div>
       <div>
         <div>
-          <span>Map View </span>
-          <SwitchUnstyled component={Root} {...label} />
-        </div>
-        <div>
-          <span>Sort By </span>
-          <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <p>Map View </p>
+          <div>
+            <SwitchUnstyled
+              component={Root}
+              {...label}
+              style={{ marginRight: "30px" }}
+            />
+          </div>
+          {/* </div>
+        <div> */}
+          <p>Sort By </p>
+          <FormControl sx={{ m: 1, minWidth: 100 }}>
             <Select
               value={age}
               onChange={handleChange}
@@ -100,14 +106,11 @@ export const TopFilterBar = () => {
               inputProps={{ "aria-label": "Without label" }}
               style={{
                 width: "200px",
-                border: "2px solid #D3D3D3",
                 height: "40px",
               }}
             >
-              <MenuItem value="">
-                <em>Popularity</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value="">Popularity</MenuItem>
+              <MenuItem value={10}></MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>

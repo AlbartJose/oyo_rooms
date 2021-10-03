@@ -5,6 +5,9 @@ import { HotelInfo } from "./HotelInfo/HotelInfo";
 import { TopFilterBar } from "./Filters/TopFilterBar";
 import { FooterTwo } from "./FooterTwo";
 import { COVID } from "./COVID";
+import { Navbar2 } from "../Components/Navbar2/Navbar2";
+import { hotels } from "./db";
+import { useState, useEffect } from "react";
 
 const MainDiv = styled.div`
   display: flex;
@@ -14,7 +17,7 @@ const LeftDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2%;
-  width: 20%;
+  width: 25%;
   position: sticky;
   position: -webkit-sticky;
 `;
@@ -22,28 +25,39 @@ const RightDiv = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 79%;
+  width: 74%;
   padding: 2%;
 `;
 
 export const HotelOptions = () => {
+  const [cardData, setCardData] = useState([]);
+
+  useEffect(() => {
+    const data = hotels;
+    // console.log(hotels.hotel);
+    setCardData(data.hotel);
+  }, []);
   return (
-    <>
-      <COVID />
-      <MainDiv>
-        <LeftDiv>
-          <Filters />
-        </LeftDiv>
-        <RightDiv>
-          <TopFilterBar />
-          <Offer1 />
-          <HotelInfo />
-          <HotelInfo />
-          <HotelInfo />
-          <HotelInfo />
-        </RightDiv>
-      </MainDiv>
-      <FooterTwo />
-    </>
+    <div style={{ position: "realtive" }}>
+      <div>
+        <Navbar2 />
+      </div>
+      <div style={{ position: "absolute", marginTop: "75px" }}>
+        <COVID />
+        <MainDiv>
+          <LeftDiv>
+            <Filters />
+          </LeftDiv>
+          <RightDiv>
+            <TopFilterBar />
+            <Offer1 />
+            {cardData.map((e) => {
+              return <HotelInfo key={e.id} data={e} />;
+            })}
+          </RightDiv>
+        </MainDiv>
+        <FooterTwo />
+      </div>
+    </div>
   );
 };

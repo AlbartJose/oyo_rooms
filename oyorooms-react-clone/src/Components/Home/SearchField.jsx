@@ -8,11 +8,11 @@ function SearchField() {
   const [roomCounter, setroomCounter] = useState(1);
   const [rooms, setrooms] = useState(false);
   const [roomsNum, setroomsNum] = useState(1);
-  const [date, setonDateChange] = useState("");
+
   const handleRoomDIv = () => {
     setrooms(true);
   };
-  console.log(date);
+  // console.log(startDate);
   let roomRef = useRef();
 
   const handleLinkClick = () => {
@@ -46,13 +46,15 @@ function SearchField() {
             placeholder="Search by city,hotel or neighbourhood"
           />
           <RangeDatePicker
-            startDate={new Date(2020, 0, 15)}
-            endDate={new Date(2020, 1, 1)}
-            onChange={(startDate, endDate) =>
-              setonDateChange(startDate, endDate)
-            }
+            startDate={new Date()}
+            endDate={new Date()}
             minDate={new Date(1900, 0, 1)}
             maxDate={new Date(2100, 0, 1)}
+            dateFormat="D"
+            monthFormat="MMM YYYY"
+            startDatePlaceholder="Start Date"
+            endDatePlaceholder="End Date"
+            startWeekDay="monday"
           />
           <div className="rooms" onClick={handleRoomDIv}>
             <p>1 Room, 1 Guest</p>

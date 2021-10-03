@@ -21,21 +21,28 @@ export const FooterTwo = () => {
     }
 
     & .footer-sec2 div:nth-of-type(2) {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      width: 40%;
+      display: flex;
+      flex-direction: column;
+      width: 20%;
       border-right: 1px solid hsla(0, 0%, 100%, 0.5);
-      padding-left: 45px;
       border-left: 1px solid hsla(0, 0%, 100%, 0.5);
     }
+
     & .footer-sec2 div:nth-of-type(2) p {
       margin: 10px;
     }
     & .footer-sec2 div:nth-of-type(2) p:hover {
       text-decoration: underline;
     }
+    & .footer-sec2 div:nth-of-type(3) {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      border-right: 1px solid hsla(0, 0%, 100%, 0.5);
+      /* border-left: 1px solid hsla(0, 0%, 80%, 0.5); */
+    }
     & .footer-sec2 div:nth-of-type(3) p {
-      margin: 20px;
+      margin: 10px;
     }
     & .footer-sec2 div:nth-of-type(3) p:hover {
       text-decoration: underline;
@@ -78,12 +85,14 @@ export const FooterTwo = () => {
           </div>
           <div>
             <p>About Us</p>
-            <p>Teams / Careers</p>
             <p>Blogs</p>
-            <p>Support</p>
             <p>Official OYO Blog</p>
-            <p>Press Kit</p>
             <p>OYO Circle</p>
+          </div>
+          <div>
+            <p>Teams / Careers</p>
+            <p>Support</p>
+            <p>Press Kit</p>
             <p>OYO Frames</p>
           </div>
           <div>
@@ -107,13 +116,14 @@ export const FooterTwo = () => {
             <p>Unlocking Homes</p>
           </div>
         </div>
-
         <div className="footer-sec5">
-          <img src="/images/facebookIcon.png" alt="img" />
-          <img src="/images/InstagramIcon.png" alt="img" />
-          <img src="/images/TwitterIcon.png" alt="img" />
-          <img src="/images/MediaIcon.png" alt="img" />
-          <img src="/images/PinIcon.png" alt="img" />
+          <div style={{ marginLeft: "40px" }}>
+            <img src="/images/facebookIcon.png" alt="img" />
+            <img src="/images/InstagramIcon.png" alt="img" />
+            <img src="/images/TwitterIcon.png" alt="img" />
+            <img src="/images/MediaIcon.png" alt="img" />
+            <img src="/images/PinIcon.png" alt="img" />
+          </div>
         </div>
       </Footer>
     </>

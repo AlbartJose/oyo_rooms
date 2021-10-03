@@ -1,6 +1,26 @@
-import { Input, Button } from "antd";
+// import { Input, Button } from "antd";
 //import "antd/dist/antd.css";
 import styled from "styled-components";
+import FormControl, { useFormControl } from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Box from "@mui/material/Box";
+import FormHelperText from "@mui/material/FormHelperText";
+import { useMemo } from "react";
+import Button from "@mui/material/Button";
+
+// function MyFormHelperText() {
+//   const { focused } = useFormControl() || {};
+
+//   const helperText = useMemo(() => {
+//     if (focused) {
+//       return "This field is being focused";
+//     }
+
+//     return "Helper text";
+//   }, [focused]);
+
+//   return <FormHelperText>{helperText}</FormHelperText>;
+// }
 
 const ButtonDiv = styled.div`
   display: flex;
@@ -11,9 +31,58 @@ const ButtonDiv = styled.div`
 export const Locations = () => {
   return (
     <>
-      <Input placeholder="Search..." style={{ borderColor: "#F0F0F0" }} />
+      <Box component="form" noValidate autoComplete="off">
+        <FormControl sx={{ width: "30ch" }}>
+          <OutlinedInput
+            placeholder="Search"
+            style={{ fontSize: "12px", padding: "0px" }}
+          />
+          {/* <MyFormHelperText /> */}
+        </FormControl>
+      </Box>
+
       <ButtonDiv>
         <Button
+          variant="contained"
+          style={{
+            borderRadius: "0px",
+            margin: "3px 3px 0 3px",
+            background: "#E5E5E5",
+            color: "#6D787D",
+            width: "auto",
+            shadow: "none",
+          }}
+        >
+          Railway Station
+        </Button>
+        <Button
+          variant="contained"
+          style={{
+            borderRadius: "0px",
+            margin: "3px 3px 0 3px",
+            background: "#E5E5E5",
+            color: "#6D787D",
+            width: "auto",
+            shadow: "none",
+          }}
+        >
+          Gandhi Road
+        </Button>
+        <Button
+          variant="contained"
+          style={{
+            borderRadius: "0px",
+            margin: "3px 3px 0 3px",
+            background: "#E5E5E5",
+            color: "#6D787D",
+            width: "auto",
+            shadow: "none",
+          }}
+        >
+          University Road
+        </Button>
+
+        {/* <Button
           style={{
             width: "auto",
             margin: "2% 2% 0 0",
@@ -42,7 +111,7 @@ export const Locations = () => {
           }}
         >
           Railway Station Road
-        </Button>
+        </Button> */}
       </ButtonDiv>
       <Button
         type="link"

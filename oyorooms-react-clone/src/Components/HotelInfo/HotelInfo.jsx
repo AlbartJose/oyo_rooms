@@ -48,7 +48,7 @@ const Head = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 14px;
+  line-height: 18px;
   letter-spacing: -0.005em;
   text-align: left;
   color: #424242;
@@ -58,7 +58,7 @@ const Location = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1px;
+  line-height: 5px;
   letter-spacing: -0.005em;
   text-align: left;
   color: #424242;
@@ -73,7 +73,7 @@ const Rating = styled.div`
   border-radius: 5%;
   color: #ffffff;
   padding: 0 0.3%;
-  margin-top: 0;
+  margin: 2px 0;
 `;
 
 const Block = styled.div`
@@ -83,8 +83,12 @@ const Block = styled.div`
 
 const BottomDiv = styled.div`
   display: flex;
-  & > div {
-    justify-content: flex-end;
+  margin-top: 3%;
+  /* justify-self: end; */
+  /* align-items: flex-end; */
+  & Button[variant="contained"]:hover {
+    background-color: #128037;
+    /* justify-content: flex-end; */
   }
 `;
 
@@ -178,7 +182,7 @@ const P1 = styled.p`
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 8px;
   /* identical to box height */
 
   letter-spacing: -0.005em;
@@ -186,33 +190,50 @@ const P1 = styled.p`
   color: #636363;
 `;
 
-export const HotelInfo = () => {
+export const HotelInfo = ({ key, data }) => {
   const history = useHistory();
 
+  const handleViewDetails = () => {
+    history.push(`/hoteldetail/${data.id}`);
+  };
+
   const handleBookNow = () => {
-    history.push("/hoteldetail");
+    history.push(`/payment/${data.id}`);
   };
   return (
     <>
       <Div>
         <LDiv>
-          <ImageCarousel />
+          <ImageCarousel key={key} data={data} />
         </LDiv>
         <RDiv>
           <Block>
             <ItemHead>
               <div>
-                <Head>Hotel Name</Head>
-                <Location>Near Sitabuldi, Nagpur</Location>
+                <Head>{data.name}</Head>
+                <Location>{data.location}</Location>
               </div>
               <Alert>Vaccinated staff. RT-PCR report required</Alert>
             </ItemHead>
             <div>
-              <Rating> 3.5 ★</Rating>
-              <RateDiv>(300 Ratings) . Good</RateDiv>
+              <Rating> {data.rating} ★</Rating> <span> </span>
+              <RateDiv> (300 Ratings) . Good</RateDiv>
             </div>
-            <div>TV </div>
-            <TagDiv>
+            <div style={{ marginTop: "10px" }}>
+              <img
+                src="Images/Facilities.png"
+                alt=""
+                style={{ width: "auto", height: "20px" }}
+              />
+            </div>
+            <div style={{ marginTop: "10px" }}>
+              <img
+                src="Images/Qualities.png"
+                alt=""
+                style={{ width: "auto", height: "30px" }}
+              />
+            </div>
+            {/* <TagDiv>
               <Button
                 variant="outlined"
                 style={{
@@ -223,24 +244,26 @@ export const HotelInfo = () => {
               >
                 Outlined
               </Button>
-            </TagDiv>
+            </TagDiv> */}
 
             <BottomDiv>
-              <div>
-                <Span1>₹888</Span1>
-                <Span2>₹1544</Span2>
-                <Span3>63% off</Span3>
+              <div style={{ alignSelf: "flex-end" }}>
+                <Span1>₹{data.price}</Span1>
+                <Span2>₹{data.price * 3}</Span2>
+                <Span3>66% off</Span3>
                 <P1>per room per night</P1>
               </div>
               <Stack spacing={2} direction="row">
-                <div>
+                <div style={{ justifySelf: "end" }}>
                   <Button
+                    onClick={handleViewDetails}
                     variant="outlined"
                     style={{
                       color: "#424242",
                       borderColor: "#424242",
                       height: "70%",
-                      marginLeft: "40px",
+
+                      // marginLeft: "40px",
                     }}
                   >
                     View Details
@@ -251,7 +274,8 @@ export const HotelInfo = () => {
                     style={{
                       backgroundColor: "#1AB64F",
                       height: "70%",
-                      marginLeft: "20px",
+                      marginLeft: "10px",
+                      marginRight: 0,
                     }}
                   >
                     Book Now
