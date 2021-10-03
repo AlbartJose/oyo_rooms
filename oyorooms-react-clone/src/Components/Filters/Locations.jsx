@@ -1,18 +1,42 @@
-import { Input, Button } from "antd";
+// import { Input, Button } from "antd";
 //import "antd/dist/antd.css";
 import styled from "styled-components";
+import FormControl, { useFormControl } from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Box from "@mui/material/Box";
+import FormHelperText from "@mui/material/FormHelperText";
+import { useMemo } from "react";
 
-const ButtonDiv = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  /* margin-right: 5%; */
-`;
+function MyFormHelperText() {
+  const { focused } = useFormControl() || {};
+
+  const helperText = useMemo(() => {
+    if (focused) {
+      return "This field is being focused";
+    }
+
+    return "Helper text";
+  }, [focused]);
+
+  return <FormHelperText>{helperText}</FormHelperText>;
+}
+
+// const ButtonDiv = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   /* margin-right: 5%; */
+// `;
 
 export const Locations = () => {
   return (
     <>
-      <Input placeholder="Search..." style={{ borderColor: "#F0F0F0" }} />
-      <ButtonDiv>
+      <Box component="form" noValidate autoComplete="off">
+        <FormControl sx={{ width: "25ch" }}>
+          <OutlinedInput placeholder="Please enter text" />
+          <MyFormHelperText />
+        </FormControl>
+      </Box>
+      {/* <ButtonDiv>
         <Button
           style={{
             width: "auto",
@@ -55,7 +79,7 @@ export const Locations = () => {
         }}
       >
         + View More
-      </Button>
+      </Button> */}
     </>
   );
 };

@@ -27,7 +27,7 @@ export const SlideBar = () => {
     <>
       <P>Price</P>
 
-      <Box sx={{ width: 200 }}>
+      <Box sx={{ width: 300 }}>
         <Slider
           getAriaLabel={() => "Price range"}
           value={value}
