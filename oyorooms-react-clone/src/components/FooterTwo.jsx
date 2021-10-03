@@ -7,7 +7,7 @@ export const FooterTwo = () => {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 30px 80px;
+      padding: 30px 30px;
       border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
     }
     & .footer-sec2 div:nth-of-type(1) {
@@ -39,6 +39,9 @@ export const FooterTwo = () => {
     }
     & .footer-sec2 div:nth-of-type(3) p:hover {
       text-decoration: underline;
+    }
+    & .footer-sec2 img {
+      margin-right: 20px;
     }
     & .footer-sec3 {
       display: flex;

@@ -20,7 +20,7 @@ export const Categories = () => {
       <p>Categories</p>
       <Div>
         <div>
-          <Checkbox {...label} />
+          <Checkbox {...label} color="success" />
         </div>
 
         <p>
@@ -30,7 +30,7 @@ export const Categories = () => {
       </Div>
       <Div>
         <div>
-          <Checkbox {...label} />
+          <Checkbox {...label} color="success" />
         </div>
         <p>
           OYO Rooms -{" "}
@@ -39,7 +39,7 @@ export const Categories = () => {
       </Div>
       <Div>
         <div>
-          <Checkbox {...label} />
+          <Checkbox {...label} color="success" />
         </div>
         <p>
           OYO Rooms -{" "}

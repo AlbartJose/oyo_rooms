@@ -82,6 +82,8 @@ const Block = styled.div`
 
 const BottomDiv = styled.div`
   display: flex;
+  padding-top: 5.5%;
+
   & > div {
     justify-content: flex-end;
   }

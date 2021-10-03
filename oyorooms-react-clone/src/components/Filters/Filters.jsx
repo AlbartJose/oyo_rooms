@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Categories } from "./Categories";
 import { Collections } from "./Collections";
 
+const Div = styled.div``;
+
 const P1 = styled.p`
   font-size: 20px;
   font-style: normal;
@@ -30,7 +32,7 @@ const ComponentDiv = styled.div`
 
 export const Filters = () => {
   return (
-    <>
+    <Div>
       <ComponentDiv>
         <P1>Filters</P1>
         <P2>Popular locations in Nagpur, Maharashtra, India</P2>
@@ -46,6 +48,24 @@ export const Filters = () => {
       <ComponentDiv>
         <Categories />
       </ComponentDiv>
-    </>
+      <ComponentDiv>
+        <SlideBar />
+      </ComponentDiv>
+      <ComponentDiv>
+        <Collections />
+      </ComponentDiv>
+      <ComponentDiv>
+        <Categories />
+      </ComponentDiv>
+      <ComponentDiv>
+        <SlideBar />
+      </ComponentDiv>
+      <ComponentDiv>
+        <Collections />
+      </ComponentDiv>
+      <ComponentDiv>
+        <Categories />
+      </ComponentDiv>
+    </Div>
   );
 };

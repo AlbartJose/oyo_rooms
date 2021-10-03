@@ -5,8 +5,15 @@ import SwitchUnstyled, {
 import { Div } from "./Div4TopFilter";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+// import Select from "@mui/material/Select";
 import { useState } from "react";
+import { Select } from "antd";
+
+const { Option } = Select;
+
+function handleChange(value) {
+  console.log(`selected ${value}`);
+}
 
 const Root = styled("span")(`
   font-size: 0;
@@ -74,11 +81,11 @@ const Root = styled("span")(`
   }`);
 
 export const TopFilterBar = () => {
-  const [age, setAge] = useState("");
+  //   const [age, setAge] = useState("");
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+  //   const handleChange = (event) => {
+  //     setAge(event.target.value);
+  //   };
   const label = { componentsProps: { input: { "aria-label": "Demo switch" } } };
   return (
     <Div>
@@ -87,31 +94,68 @@ export const TopFilterBar = () => {
       </div>
       <div>
         <div>
-          <span>Map View </span>
-          <SwitchUnstyled component={Root} {...label} />
+          <span
+            style={{
+              fontSize: "14px",
+              padding: "2%",
+              width: "80px",
+              marginTop: "4px",
+            }}
+          >
+            Map View{" "}
+          </span>
+          <SwitchUnstyled
+            component={Root}
+            {...label}
+            style={{
+              //   width: "80px",
+              marginTop: "7px",
+            }}
+          />
         </div>
         <div>
-          <span>Sort By </span>
-          <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <span
+            style={{
+              fontSize: "14px",
+              padding: "5%",
+              width: "80px",
+              marginTop: "-5px",
+            }}
+          >
+            Sort By{" "}
+          </span>
+          <Select
+            defaultValue="Popularity"
+            style={{ width: 150 }}
+            onChange={handleChange}
+          >
+            <Option value="jack">Jack</Option>
+            <Option value="lucy">Lucy</Option>
+            <Option value="disabled" disabled>
+              Disabled
+            </Option>
+            <Option value="Yiminghe">yiminghe</Option>
+          </Select>
+
+          {/* <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select
               value={age}
               onChange={handleChange}
-              displayEmpty
+              //   displayEmpty
               inputProps={{ "aria-label": "Without label" }}
               style={{
                 width: "200px",
-                border: "2px solid #D3D3D3",
+                // border: "none",
+                textDecoration: "none",
                 height: "40px",
               }}
             >
-              <MenuItem value="">
-                <em>Popularity</em>
-              </MenuItem>
+              <MenuItem value="">Popularity</MenuItem>
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl> */}
         </div>
       </div>
     </Div>

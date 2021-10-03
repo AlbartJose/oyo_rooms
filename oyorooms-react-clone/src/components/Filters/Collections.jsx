@@ -17,7 +17,7 @@ const label = { inputProps: { "aria-label": "Checkbox demo" } };
 export const Collections = () => {
   return (
     <>
-      <p>Categories</p>
+      <p>Collections</p>
       <Div>
         <div>
           <Checkbox {...label} />
