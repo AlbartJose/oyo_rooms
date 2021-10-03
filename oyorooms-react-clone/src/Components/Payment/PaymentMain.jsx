@@ -108,7 +108,7 @@ export function PaymentMain() {
           <div>
             <div className="paymentConfirmed">
               <div className="payTick">
-                <img src="./Images/Payment/Group.svg" alt="" />
+                <img src="/Images/Payment/Group.svg" alt="" />
               </div>
               <div>Booking Confirmed</div>
               <div>

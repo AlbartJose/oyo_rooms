@@ -39,7 +39,7 @@ function SearchField() {
         <p className="heading-red-rectangle">
           World’s Fastest Growing Hotel Chain
         </p>
-        <img src="/images/redRectangle.png" alt="redRectangle" />
+        <img src="/Images/redRectangle.png" alt="redRectangle" />
         <div className="search-field">
           <input
             type="text"

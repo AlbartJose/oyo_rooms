@@ -15,6 +15,6 @@ export const Offer1 = () => {
     //   </h5>
     //   <p>Create an account to get ₹500 as OYO Money</p>
     // </Div>
-    <Img src="images/Offer1.png" alt="" />
+    <Img src="Images/Offer1.png" alt="" />
   );
 };

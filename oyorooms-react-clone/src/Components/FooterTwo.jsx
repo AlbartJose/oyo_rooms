@@ -79,9 +79,9 @@ export const FooterTwo = () => {
           <div>
             <p>Download OYO app for excitng offers.</p>
             <br />
-            <img src="/images/appstore.png" alt="applestore" />
+            <img src="/Images/appstore.png" alt="applestore" />
 
-            <img src="/images/playstored.png" alt="playstored" />
+            <img src="/Images/playstored.png" alt="playstored" />
           </div>
           <div>
             <p>About Us</p>
@@ -118,11 +118,11 @@ export const FooterTwo = () => {
         </div>
         <div className="footer-sec5">
           <div style={{ marginLeft: "40px" }}>
-            <img src="/images/facebookIcon.png" alt="img" />
-            <img src="/images/InstagramIcon.png" alt="img" />
-            <img src="/images/TwitterIcon.png" alt="img" />
-            <img src="/images/MediaIcon.png" alt="img" />
-            <img src="/images/PinIcon.png" alt="img" />
+            <img src="/Images/facebookIcon.png" alt="img" />
+            <img src="/Images/InstagramIcon.png" alt="img" />
+            <img src="/Images/TwitterIcon.png" alt="img" />
+            <img src="/Images/MediaIcon.png" alt="img" />
+            <img src="/Images/PinIcon.png" alt="img" />
           </div>
         </div>
       </Footer>

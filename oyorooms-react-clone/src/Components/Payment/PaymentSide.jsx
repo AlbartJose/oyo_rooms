@@ -32,14 +32,14 @@ export function PaymentSide({ initVar, payDataDetail, payImg }) {
       </div>
       <div className="margin30">
         <div className="paySideIcon paySideFont14">
-          <img src="./Images/Payment/Group 24.svg" alt="" />
+          <img src="/Images/Payment/Group 24.svg" alt="" />
           {payData.date}
         </div>
         <div className="paySideFont14">{payData.room}</div>
       </div>
       <div className="margin30">
         <div className="paySideIcon paySideFont14">
-          <img src="./Images/Payment/Type.svg" alt="" />
+          <img src="/Images/Payment/Type.svg" alt="" />
           {payData.type}
         </div>
       </div>

@@ -4,13 +4,13 @@ function Footer() {
       <div className="footer">
         <div className="footer-sec1">
           <div>
-            <img src="/images/UnionWhite.png" alt="UnionWhite" />
+            <img src="/Images/UnionWhite.png" alt="UnionWhite" />
             <p>The World’s Fastest Growing Hotel Chain</p>
           </div>
           <div>
             <p>Join our network and grow your business!</p>
             <button>
-              <img src="/images/property.png" alt="property" />
+              <img src="/Images/property.png" alt="property" />
               List your property
             </button>
           </div>
@@ -19,9 +19,9 @@ function Footer() {
           <div>
             <p>Download OYO app for excitng offers.</p>
             <br />
-            <img src="/images/appstore.png" alt="applestore" />
+            <img src="/Images/appstore.png" alt="applestore" />
 
-            <img src="/images/playstored.png" alt="playstored" />
+            <img src="/Images/playstored.png" alt="playstored" />
           </div>
           <div>
             <p>About Us</p>
@@ -127,11 +127,11 @@ function Footer() {
         </div>
         <div className="footer-sec5">
           <div>
-            <img src="/images/facebookIcon.png" alt="img" />
-            <img src="/images/InstagramIcon.png" alt="img" />
-            <img src="/images/TwitterIcon.png" alt="img" />
-            <img src="/images/MediaIcon.png" alt="img" />
-            <img src="/images/PinIcon.png" alt="img" />
+            <img src="/Images/facebookIcon.png" alt="img" />
+            <img src="/Images/InstagramIcon.png" alt="img" />
+            <img src="/Images/TwitterIcon.png" alt="img" />
+            <img src="/Images/MediaIcon.png" alt="img" />
+            <img src="/Images/PinIcon.png" alt="img" />
           </div>
           <div>
             <p>2013-2021 © Oravel Stays Private Limited</p>

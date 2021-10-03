@@ -14,7 +14,7 @@ function LocationDetail(props) {
         }}
       >
         <p>{props.name}</p>
-        <img src="/images/down.png" alt="down" />
+        <img src="/Images/down.png" alt="down" />
       </div>
 
       {div ? (

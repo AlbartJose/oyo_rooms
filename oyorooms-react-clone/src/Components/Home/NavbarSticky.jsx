@@ -107,7 +107,7 @@ function NavbarSticky() {
           <img src="/general-Icons/LanguageShort.svg" alt="En" />
         </div>
         <div className="login-sticky">
-          <img src="/images/profile.png" alt="profile" />
+          <img src="/Images/profile.png" alt="profile" />
           <p>Login / Signup</p>
         </div>
       </header>

@@ -5,21 +5,21 @@ function NavbarHome() {
       <header>
         <div className="master-div-navbar">
           <div className="navbar-logo">
-            <img src="/images/Union.png" alt="Union" />
+            <img src="/Images/Union.png" alt="Union" />
           </div>
           <div className="navbar-right-section">
             <div>
-              <img src="/images/becomeMember.png" alt="becomeMember" />
+              <img src="/Images/becomeMember.png" alt="becomeMember" />
             </div>
             <div>
-              <img src="/images/listProperty.png" alt="becomeMember" />
+              <img src="/Images/listProperty.png" alt="becomeMember" />
             </div>
             <div>
-              <img src="/images/language.png" alt="language" />
+              <img src="/Images/language.png" alt="language" />
             </div>
             <div>
               <Link to="/" className="login-signup">
-                <img src="/images/profile.png" alt="profile" />
+                <img src="/Images/profile.png" alt="profile" />
                 <p>Login / Signup</p>
               </Link>
             </div>

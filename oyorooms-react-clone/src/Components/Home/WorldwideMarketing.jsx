@@ -31,12 +31,12 @@ function WorldwideMarketing() {
         <div>
           <div>
             <img
-              src="/images/landing background map.png"
+              src="/Images/landing background map.png"
               alt="landing background map"
             />
             {uae ? <div className="uaeDiv">UAE</div> : null}
             <img
-              src="/images/uae.png"
+              src="/Images/uae.png"
               alt="uae"
               className="uae"
               onMouseEnter={handleUae}
@@ -46,7 +46,7 @@ function WorldwideMarketing() {
             />
             {nepal ? <div className="nepalDiv">Nepal</div> : null}
             <img
-              src="/images/nepal.png"
+              src="/Images/nepal.png"
               alt="nepal"
               className="nepal"
               onMouseEnter={handlenepal}
@@ -56,7 +56,7 @@ function WorldwideMarketing() {
             />
             {china ? <div className="chinaDiv">China</div> : null}
             <img
-              src="/images/china.png"
+              src="/Images/china.png"
               alt="china"
               className="china"
               onMouseEnter={handlechina}
@@ -66,7 +66,7 @@ function WorldwideMarketing() {
             />
             {india ? <div className="indiaDiv">India</div> : null}
             <img
-              src="/images/india.png"
+              src="/Images/india.png"
               alt="india"
               className="india"
               onMouseEnter={handleindia}
@@ -76,7 +76,7 @@ function WorldwideMarketing() {
             />
             {malayasia ? <div className="malayasiaDiv">Malayasia</div> : null}
             <img
-              src="/images/malayasia.png"
+              src="/Images/malayasia.png"
               alt="malayasia"
               className="malayasia"
               onMouseEnter={handlemalayasia}
@@ -86,7 +86,7 @@ function WorldwideMarketing() {
             />
             {indo ? <div className="indoDiv">Indonesia</div> : null}
             <img
-              src="/images/indonesia.png"
+              src="/Images/indonesia.png"
               alt="indonesia"
               className="indonesia"
               onMouseEnter={handleindo}
