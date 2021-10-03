@@ -15,11 +15,9 @@ const PayImgDiv = styled.div`
   }
 `;
 
-export function PaymentSide({ initVar, payDataDetail }) {
+export function PaymentSide({ initVar, payDataDetail,payImg }) {
   const [payData] = useState(initVar);
 
-  // console.log(payDataDetail);
-  console.log(payDataDetail.images);
 
   return (
     <div className="paymentB1Side">
@@ -30,7 +28,7 @@ export function PaymentSide({ initVar, payDataDetail }) {
           <div className="paymentSideDays">{payData.days} Nights</div>
         </div>
         <PayImgDiv>
-          {/* <img src={payDataDetail.images[0]} alt="" /> */}
+          <img src={payImg[0]} alt="" />
         </PayImgDiv>
       </div>
       <div className="margin30">
@@ -47,7 +45,7 @@ export function PaymentSide({ initVar, payDataDetail }) {
         </div>
       </div>
       <div className="margin20">
-        <div>Room price fo 16 Nights X 2 Guesta</div>
+        <div>Room price for 16 Nights X 2 Guesta</div>
         <div className="paySideFont14SlightBold">
           ₹{payDataDetail.price * 3}
         </div>

@@ -7,39 +7,25 @@ import { useState, useEffect } from "react";
 
 // import {Icons} from ".../public/Icons"
 
-const arr = [
-  "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/b77a333008807a5b.jpg",
-  "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/f114486dd5bea9b0.jpg",
-  "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/d986bbed17bbbe51.jpg",
-  "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/87b37ea9f0066a6f.jpg",
-  "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/2c0aed9638fdb0e4.jpg",
-  "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/d54d4dd0f7c19c32.jpg",
-];
 
-const hotelDetails = [
-  {
-    name: "SPOT ON 46946 Hotel Aalishan",
-    location: "Near Bus Stop Ganeshpeth, Mominpura, Nagpur",
-    city: "Nagpur",
-    description:
-      "Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation & safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.",
-    price: 13964,
-    img: "https://images.oyoroomscdn.com/uploads/hotel_image/75719/large/b77a333008807a5b.jpg",
-  },
-];
 
 export function RoomDetails() {
   const { id } = useParams();
   const [pageData, setPageData] = useState([]);
-
+ const [pageImg,setPageImg]=useState([])
   useEffect(() => {
     const data = hotels;
+    const images=data.hotel[id-1].images
+    setPageImg(images)
     // console.log(hotels.hotel);
     setPageData(data.hotel[id - 1]);
   }, []);
+  // console.log(pageData.images)
+console.log(pageImg);
   return (
     <div>
-      <Slider arr={arr} />
+
+      <Slider arr={pageImg} />
       <>
         {/* {pageData.map((e) => { */}
         <div className="product-details-parent-div">
@@ -86,7 +72,7 @@ export function RoomDetails() {
                   />
                 </div>
                 <div>
-                  <img src={arr[0]} className="single-image-room" alt="" />
+                  <img src={pageImg[0]} className="single-image-room" alt="" /> 
                 </div>
               </div>
               <hr />

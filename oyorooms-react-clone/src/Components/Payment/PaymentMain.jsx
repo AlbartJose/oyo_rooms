@@ -22,12 +22,13 @@ var initVar = {
 export function PaymentMain() {
   const { id } = useParams();
   const [payDataDetail, setPayDataDetail] = useState({});
-
-  const [payData] = useState(initVar);
+  const [payImg,setPayImg]=useState([])
   const [cardOpen, setCardOpen] = useState(false);
   const [user, setUser] = useState({});
   useEffect(() => {
     const data = hotels;
+    const images=data.hotel[id-1].images
+    setPayImg(images)
     console.log(hotels.hotel);
     setPayDataDetail(data.hotel[id - 1]);
     // console.log(payDataDetail);
@@ -62,7 +63,7 @@ export function PaymentMain() {
               </>
             )}
           </div>
-          <PaymentSide initVar={initVar} payDataDetail={payDataDetail} />
+          <PaymentSide initVar={initVar} payImg={payImg} payDataDetail={payDataDetail} />
         </div>
       </div>
     </div>
